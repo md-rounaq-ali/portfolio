@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Rounaq Ali</title>
+    <meta name="description"
+        content="Portfolio of Md Rounaq Ali — B.Tech CSE Student, Python, Java, C, DBMS, Data Structures, DevOps enthusiast and aspiring software developer.">
+    <meta name="keywords"
+        content="Md Rounaq Ali, Software Developer, Python, Java, C, DBMS, Data Structures, DevOps, Portfolio">
+    <meta name="author" content="Md Rounaq Ali">
+    <meta name="google-site-verification" content="WbxisQQmu7rTSfh2IwgQJePnQvabC5nvxczIs7zZeoA" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Md Rounaq Ali — Aspiring Software Developer">
+    <meta property="og:description" content="B.Tech CSE Student passionate about software development, Python, Java, Flutter, DBMS & DevOps. Based in Hyderabad, India.">
+    <meta property="og:image" content="assets/profile-avatar.png">
+    <meta property="og:url" content="https://www.linkedin.com/in/md-rounaq-ali/">
+    <meta property="og:site_name" content="Md Rounaq Ali Portfolio">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md Rounaq Ali — Aspiring Software Developer">
+    <meta name="twitter:description" content="B.Tech CSE Student passionate about Python, Java, Flutter & DevOps.">
+    <meta name="twitter:image" content="assets/profile-avatar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md Rounaq Ali",
+      "jobTitle": "Aspiring Software Developer",
+      "url": "https://www.linkedin.com/in/md-rounaq-ali/",
+      "image": "https://md-rounaq-ali.github.io/portfolio/assets/profile-avatar.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "India"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Nalla Narasimha Reddy Education Society Group of Institutions",
+        "sameAs": "http://www.nnrg.edu.in/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/md-rounaq-ali/",
+        "https://github.com/md-rounaq-ali"
+      ],
+      "knowsAbout": [
+        "Python",
+        "Java",
+        "C Programming",
+        "Flutter",
+        "Dart",
+        "SQL",
+        "Database Management Systems",
+        "Cyber Security",
+        "Software Development"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><span class="logo-bracket">&lt;</span>RA<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-fill"></div>
+            </div>
+            <p class="preloader-text">MD ROUNAQ ALI</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-dot" id="customCursorDot"></div>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="navLogo">
+                <span class="logo-bracket">&lt;</span>RA<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span>
+                Aspiring Software Developer
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">Md Rounaq Ali</span>
+                <span class="hero-role" id="typedRole"></span>
+                <span class="typed-cursor">|</span>
+            </h1>
+            <p class="hero-description animate-on-scroll">
+                B.Tech CSE Student passionate about software development, problem-solving, and continuous learning.
+                Skilled in Python, Java, C, DBMS, Data Structures &amp; DevOps.
+            </p>
+            <div class="hero-cta animate-on-scroll">
+
+                <a href="assets/resume.html" target="_blank" class="btn btn-primary" id="heroResumeBtn">
+                    <span>View Resume</span>
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="heroContactBtn">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="hero-available animate-on-scroll">
+                <span class="avail-dot"></span>
+                <span>Open to Internship Opportunities</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll"
+                    style="display:flex;align-items:center;justify-content:center;">
+                    <div class="image-frame">
+                        <img src="assets/profile-avatar.png" alt="Md Rounaq Ali - Profile" id="aboutImage">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <h3 class="about-subtitle">
+                        A passionate developer from <span class="highlight">Hyderabad, India</span>
+                    </h3>
+                    <p class="about-text">
+                        Currently pursuing a B.Tech in Computer Science and Engineering at
+                        <strong>Nalla Narasimha Reddy Education Society Group of Institutions</strong> (graduating
+                        2027).
+                        I am passionate about software development, problem-solving, and continuous learning.
+                    </p>
+                    <p class="about-text">
+                        I recently participated in a <strong>Cyber Security Student Enrichment Program</strong> by
+                        Hackers Gurukul.
+                        My technical interests include <strong>Python, Java, C, DBMS, Data Structures, and
+                            DevOps</strong>.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, Telangana, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech CSE, NNRESGI</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-language"></i>
+                            <span>English, Hindi, Telugu, Urdu</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Aspiring Software Developer</span>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" rel="noopener"
+                        class="btn btn-primary" id="aboutLinkedinBtn">
+                        <span>View LinkedIn</span>
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/md-rounaq-ali" target="_blank" rel="noopener"
+                        class="btn btn-outline" id="aboutGithubBtn" style="margin-left:10px;">
+                        <span>GitHub</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Developer Terminal -->
+            <div class="about-terminal-container animate-on-scroll" style="margin-top: 50px;">
+                <div class="terminal-card glass-card">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="t-btn red"></span>
+                            <span class="t-btn yellow"></span>
+                            <span class="t-btn green"></span>
+                        </div>
+                        <div class="terminal-title">guest@rounaq-dev: ~</div>
+                    </div>
+                    <div class="terminal-body" onclick="document.getElementById('terminalInput').focus()">
+                        <div class="terminal-line">Welcome to Rounaq's Developer Shell [Version 1.0.0]</div>
+                        <div class="terminal-line">Type <span class="highlight-cmd">'help'</span> for a list of available commands.</div>
+                        <div id="terminalHistory"></div>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">guest@rounaq-dev:~$</span>
+                            <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal Input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tech Ticker -->
+        <div class="tech-ticker-wrap animate-on-scroll">
+            <div class="tech-ticker">
+                <div class="ticker-item"><i class="fab fa-python"></i> <span>Python</span></div>
+                <div class="ticker-item"><i class="fab fa-java"></i> <span>Java</span></div>
+                <div class="ticker-item"><i class="fas fa-mobile-alt"></i> <span>Flutter</span></div>
+                <div class="ticker-item"><i class="fas fa-database"></i> <span>MySQL</span></div>
+                <div class="ticker-item"><i class="fab fa-git-alt"></i> <span>Git</span></div>
+                <div class="ticker-item"><i class="fab fa-github"></i> <span>GitHub</span></div>
+                <div class="ticker-item"><i class="fab fa-js"></i> <span>JavaScript</span></div>
+                <div class="ticker-item"><i class="fab fa-html5"></i> <span>HTML5</span></div>
+                <div class="ticker-item"><i class="fab fa-css3-alt"></i> <span>CSS3</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item"><i class="fab fa-python"></i> <span>Python</span></div>
+                <div class="ticker-item"><i class="fab fa-java"></i> <span>Java</span></div>
+                <div class="ticker-item"><i class="fas fa-mobile-alt"></i> <span>Flutter</span></div>
+                <div class="ticker-item"><i class="fas fa-database"></i> <span>MySQL</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-code"></i></div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fas fa-copyright"></i> C</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Tools -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Frameworks & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                </div>
+
+                <!-- CS Fundamentals -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3>CS Fundamentals</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Data Structures</span>
+                        <span class="skill-tag"><i class="fas fa-cogs"></i> Algorithms</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> OOP</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> DBMS</span>
+                        <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- Data & Analytics -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Data & Analytics</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Data Analysis</span>
+                        <span class="skill-tag"><i class="fas fa-flask"></i> Data Science</span>
+                    </div>
+                </div>
+
+                <!-- DevOps & Security -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>DevOps & Security</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-infinity"></i> DevOps</span>
+                        <span class="skill-tag"><i class="fas fa-lock"></i> Information Security</span>
+                        <span class="skill-tag"><i class="fas fa-user-shield"></i> Cyber Security</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Networking Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Projects Done</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-image parallax-wrap">
+                        <img src="assets/block-crush.jpg" alt="Block Crush Preview" class="p-img parallax-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Lottie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Block Crush</h3>
+                        <p>High-performance mobile puzzle game achieving 60+ FPS via RepaintBoundary optimization and advanced strategy mechanics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/md-rounaq-ali/block-crush-game" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-image parallax-wrap">
+                        <img src="assets/fintrack.png" alt="FinTrack Preview" class="p-img parallax-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>FinTrack</h3>
+                        <p>Full-stack finance system improving tracking efficiency by 30% with real-time data visualization and secure MySQL architecture.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/md-rounaq-ali/personal-finance-tracker" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-image parallax-wrap">
+                        <img src="assets/weather.png" alt="Weather Intel Preview" class="p-img parallax-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>REST API</span>
+                                <span>Provider</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Intel</h3>
+                        <p>Real-time weather app with REST API integration, reducing network overhead by 15% through debounced search logic.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/md-rounaq-ali/weather-app" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;certifications&gt;</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card glass-card animate-on-scroll">
+                    <div class="cert-badge cert-badge-logo">
+                        <img src="assets/nptel-logo.png" alt="NPTEL Logo">
+                    </div>
+                    <h3>Python for Data Science</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> NPTEL</p>
+                    <p class="cert-date">Issued: April 2026</p>
+                    <p class="cert-id">ID: NPTEL26CS80S357303782</p>
+                    <a href="https://storage.googleapis.com/2026-mar-halltickets/certificate-generation-mar26/final/regular/noc26-cs80/NOC26CS80S35730378203211477.pdf"
+                        target="_blank" rel="noopener" class="cert-link"><i class="fas fa-external-link-alt"></i> View
+                        Certificate</a>
+                </div>
+                <div class="cert-card glass-card animate-on-scroll">
+                    <div class="cert-badge cert-badge-logo">
+                        <img src="assets/nptel-logo.png" alt="NPTEL Logo">
+                    </div>
+                    <h3>Database Management Systems</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> NPTEL</p>
+                    <p class="cert-date">Issued: September 2025</p>
+                    <p class="cert-id">ID: NPTEL25CS145S537001497</p>
+                    <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs145/Course/NPTEL25CS145S53700149709175485.pdf"
+                        target="_blank" rel="noopener" class="cert-link"><i class="fas fa-external-link-alt"></i> View
+                        Certificate</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" rel="noopener"
+                            class="contact-link-item" id="contactLinkedin">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">Md Rounaq Ali</span>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/919030059421" target="_blank" rel="noopener" class="contact-link-item"
+                            id="contactWhatsapp">
+                            <div class="contact-icon" style="background: rgba(37,211,102,0.12); color: #25d366;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">WhatsApp</span>
+                                <span class="contact-value">+91 9030059421</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-link-item" id="contactEmail" style="cursor: pointer;" onclick="copyToClipboard('tabrasali7@gmail.com', this)">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-info">
+                                <span class="contact-label">Email <i class="far fa-copy" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                                <span class="contact-value">tabrasali7@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-link-item" id="contactPhone" style="cursor: pointer;" onclick="copyToClipboard('+919030059421', this)">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-info">
+                                <span class="contact-label">Phone <i class="far fa-copy" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                                <span class="contact-value">+91 9030059421</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-link-item" id="contactLocation">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Hyderabad, Telangana, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="from_name" required placeholder=" ">
+                            <label for="formName">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="reply_to" required placeholder=" ">
+                            <label for="formEmail">Your Email</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formSubject" name="subject" required placeholder=" ">
+                            <label for="formSubject">Subject</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="formMessage">Your Message</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>RA<span class="logo-bracket">/&gt;</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/md-rounaq-ali/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn" id="footerLinkedin" title="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/md-rounaq-ali" target="_blank" rel="noopener"
+                        aria-label="GitHub" id="footerGithub" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://wa.me/919030059421" target="_blank" rel="noopener" aria-label="WhatsApp"
+                        id="footerWhatsapp" title="WhatsApp"
+                        style="border-color: rgba(37,211,102,0.3); color: #25d366;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:tabrasali7@gmail.com?subject=Hello%20Rounaq!&amp;body=Hi%20Md%20Rounaq%20Ali%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A"
+                        aria-label="Email" id="footerEmail" title="Email" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tabras._.07x2/" target="_blank" rel="noopener"
+                        aria-label="Instagram" id="footerInstagram" title="Instagram"
+                        style="border-color: rgba(225,48,108,0.3); color: #e1306c;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/tabras_2006" target="_blank" rel="noopener"
+                        aria-label="Snapchat" id="footerSnapchat" title="Snapchat"
+                        style="border-color: rgba(255,252,0,0.3); color: #fffc00;">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </a>
+                </div>
+                <p class="footer-text">&copy; 2026 Md Rounaq Ali. All rights reserved.</p>
+                <p class="footer-text" style="margin-top:6px; font-size:0.72rem; opacity:0.5;">Aspiring Software
+                    Developer · Hyderabad, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thank You Overlay -->
+    <div class="thankyou-overlay" id="thankyouOverlay">
+        <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+        <div class="thankyou-card">
+            <div class="thankyou-sparkles">
+                <span class="spark" style="--d:0s;--x:20%;--y:10%">✦</span>
+                <span class="spark" style="--d:0.3s;--x:80%;--y:15%">✦</span>
+                <span class="spark" style="--d:0.6s;--x:10%;--y:70%">✦</span>
+                <span class="spark" style="--d:0.9s;--x:85%;--y:75%">✦</span>
+                <span class="spark" style="--d:0.4s;--x:50%;--y:5%">✦</span>
+            </div>
+            <div class="thankyou-icon-wrap">
+                <div class="thankyou-ring"></div>
+                <div class="thankyou-icon"><i class="fas fa-check"></i></div>
+            </div>
+            <h2 class="ty-title">Message Sent</h2>
+            <p class="ty-sub">Thank you for reaching out,<br><strong id="senderName">there</strong></p>
+            <p class="ty-body">I've received your message and will get back to you as soon as possible. Stay tuned</p>
+            <div class="ty-divider"></div>
+            <button class="btn btn-primary ty-btn" id="thankyouClose">
+                <i class="fas fa-home"></i>
+                <span>Back to Portfolio</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Action Button (Resume) -->
+    <a href="assets/resume.html" target="_blank" class="fab-resume" id="fabResume" title="Download Resume">
+        <div class="fab-icon"><i class="fas fa-file-pdf"></i></div>
+        <span class="fab-text">Resume</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

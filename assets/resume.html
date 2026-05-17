@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Rounaq Ali — Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; font-size: 13px; line-height: 1.6; }
+
+        .print-btn {
+            position: fixed; top: 15px; right: 15px; z-index: 999;
+            background: #1e1b4b; color: #fff; border: none;
+            padding: 10px 22px; border-radius: 8px; font-size: 0.85rem;
+            font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .print-btn:hover { transform: translateY(-1px); }
+
+        .resume {
+            width: 210mm; min-height: 297mm;
+            margin: 30px auto; background: #fff;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+        }
+
+        /* ── HEADER ── */
+        .hdr { background: #1e1b4b; padding: 35px 45px 30px; color: #fff; }
+        .hdr-inner { display: flex; justify-content: space-between; align-items: flex-start; }
+        .hdr h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.8px; line-height: 1; }
+        .hdr-role { font-size: 1rem; color: #a5b4fc; font-weight: 500; margin-top: 8px; letter-spacing: 0.4px; }
+        .hdr-contact { text-align: right; }
+        .hdr-c { font-size: 0.8rem; color: #c7d2fe; margin-bottom: 6px; }
+        .hdr-c a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
+
+        /* ── BODY ── */
+        .body { display: grid; grid-template-columns: 1fr 220px; }
+
+        /* ── MAIN ── */
+        .main { padding: 30px 35px 30px 45px; border-right: 1px solid #edf2f7; }
+
+        .sec { margin-bottom: 26px; }
+        .sec:last-child { margin-bottom: 0; }
+
+        .sec-hd {
+            font-size: 0.7rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2.8px;
+            color: #1e1b4b; border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px; margin-bottom: 16px;
+            display: flex; align-items: center;
+        }
+
+        /* Summary */
+        .sum-p { font-size: 0.88rem; color: #4a5568; line-height: 1.8; text-align: justify; }
+
+        /* Items */
+        .item { margin-bottom: 18px; position: relative; }
+        .item:last-child { margin-bottom: 0; }
+        .item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
+        .item-title { font-size: 0.95rem; font-weight: 700; color: #1a202c; }
+        .item-date { font-size: 0.75rem; color: #718096; white-space: nowrap; font-weight: 600; text-transform: uppercase; }
+        .item-sub { font-size: 0.82rem; color: #4c1d95; font-weight: 700; margin-top: 3px; }
+        .item-meta { font-size: 0.75rem; color: #718096; margin-top: 2px; font-style: italic; }
+
+        /* Tech badge */
+        .tech-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+        .tech { font-size: 0.68rem; color: #4c1d95; font-weight: 700; background: #f5f3ff; border: 1px solid #ddd6fe; padding: 2px 9px; border-radius: 5px; }
+
+        /* Bullet list */
+        ul.bl { list-style: none; padding: 0; margin-top: 7px; }
+        ul.bl li { position: relative; padding-left: 15px; margin-bottom: 6px; font-size: 0.85rem; color: #4a5568; line-height: 1.7; }
+        ul.bl li::before { content: '•'; color: #6366f1; font-size: 1.2rem; position: absolute; left: 0; top: -3px; }
+
+        /* Edu/Cert Spacing */
+        .mini-item { margin-bottom: 12px; }
+        .mini-item:last-child { margin-bottom: 0; }
+        .score-tag { background: #fef3c7; color: #92400e; border-radius: 4px; padding: 1px 8px; font-size: 0.65rem; font-weight: 800; margin-left: 8px; border: 1px solid #fde68a; }
+
+        /* ── SIDEBAR ── */
+        .side { padding: 30px 22px; background: #f8fafc; }
+        .side-sec { margin-bottom: 28px; }
+        .side-sec:last-child { margin-bottom: 0; }
+        .side-hd {
+            font-size: 0.65rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2.2px;
+            color: #1e1b4b; border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px; margin-bottom: 14px;
+        }
+
+        /* Skills */
+        .sk-cat { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #718096; margin: 12px 0 6px; }
+        .sk-cat:first-child { margin-top: 0; }
+        .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+        .tag { background: #fff; color: #4c1d95; border: 1px solid #e2e8f0; border-radius: 5px; padding: 3px 8px; font-size: 0.7rem; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }
+
+        /* Soft skills */
+        .soft-item { font-size: 0.8rem; color: #4a5568; margin-bottom: 7px; padding-left: 12px; position: relative; }
+        .soft-item::before { content: '–'; position: absolute; left: 0; color: #cbd5e0; }
+
+        /* Languages */
+        .lang-r { margin-bottom: 10px; }
+        .lang-n { display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; color: #1a202c; margin-bottom: 4px; }
+        .lang-l { font-size: 0.68rem; color: #718096; font-weight: 400; }
+        .lang-bar { height: 4px; background: #e2e8f0; border-radius: 2px; overflow: hidden; }
+        .lang-fill { height: 100%; background: #1e1b4b; border-radius: 2px; }
+
+        @media print {
+            body { background: #fff; }
+            .resume { margin: 0; box-shadow: none; width: 100%; }
+            .print-btn { display: none; }
+            @page { size: A4; margin: 0; }
+            .main { border-right: 1px solid #edf2f7 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
+
+<div class="resume">
+
+    <!-- HEADER -->
+    <div class="hdr">
+        <div class="hdr-inner">
+            <div>
+                <h1>Md Rounaq Ali</h1>
+                <div class="hdr-role">Aspiring Software Developer &nbsp;·&nbsp; B.Tech CSE Student</div>
+            </div>
+            <div class="hdr-contact">
+                <div class="hdr-c"><a href="mailto:tabrasali7@gmail.com">tabrasali7@gmail.com</a></div>
+                <div class="hdr-c">+91 9030059421</div>
+                <div class="hdr-c">Hyderabad, Telangana, India</div>
+                <div class="hdr-c"><a href="https://linkedin.com/in/md-rounaq-ali">linkedin.com/in/md-rounaq-ali</a></div>
+                <div class="hdr-c"><a href="https://github.com/md-rounaq-ali">github.com/md-rounaq-ali</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+        <!-- MAIN COLUMN -->
+        <div class="main">
+
+            <!-- Professional Summary -->
+            <div class="sec">
+                <div class="sec-hd">Professional Summary</div>
+                <p class="sum-p">
+                    Computer Science Engineering student with expertise in Python, Java, and Cross-Platform Mobile Development (Flutter/Dart). Successfully delivered 4+ technical projects including high-performance mobile games and full-stack applications. Proficient in architecting user-centric solutions using MySQL and DevOps principles. Strong technical writer and collaborative team player with a focus on scalable software engineering and information security.
+                </p>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="sec">
+                <div class="sec-hd">Key Projects</div>
+
+                <div class="item">
+                    <div class="item-top">
+                        <div class="item-title">Block Crush — Premium Mobile Puzzle Game</div>
+                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/block-crush-game" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/block-crush-game</a></div>
+                        <div class="item-date">MAR 2026</div>
+                    </div>
+                    <div class="tech-wrap">
+                        <span class="tech">Flutter</span>
+                        <span class="tech">Dart</span>
+                        <span class="tech">Provider</span>
+                        <span class="tech">Lottie</span>
+                    </div>
+                    <ul class="bl">
+                        <li>Engineered a high-fidelity mobile puzzle game, achieving a consistent 60+ FPS on mobile devices through RepaintBoundary optimization.</li>
+                        <li>Implemented a dynamic theme engine and immersive animations using Lottie, resulting in a 25% increase in user session duration during testing.</li>
+                        <li>Collaborated with peer testers to refine game mechanics, reducing bug reports by 40% through rigorous unit testing and SDLC methodologies.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-top">
+                        <div class="item-title">FinTrack — Full-Stack Personal Finance Tracker</div>
+                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/personal-finance-tracker" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/personal-finance-tracker</a></div>
+                        <div class="item-date">DEC 2025</div>
+                    </div>
+                    <div class="tech-wrap">
+                        <span class="tech">Python</span>
+                        <span class="tech">Flask</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Chart.js</span>
+                    </div>
+                    <ul class="bl">
+                        <li>Architected a comprehensive financial management system with secure authentication, serving 50+ localized data points via a normalized relational database.</li>
+                        <li>Developed a real-time data visualization dashboard using Chart.js, improving financial health tracking efficiency by 30% for end-users.</li>
+                        <li>Authored technical documentation detailing the database schema and API endpoints to facilitate team maintenance and future scalability.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-top">
+                        <div class="item-title">Weather App — Real-time Weather Intelligence</div>
+                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/weather-app" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/weather-app</a></div>
+                        <div class="item-date">OCT 2025</div>
+                    </div>
+                    <div class="tech-wrap">
+                        <span class="tech">Flutter</span>
+                        <span class="tech">REST API</span>
+                        <span class="tech">Geolocator</span>
+                        <span class="tech">State Management</span>
+                    </div>
+                    <ul class="bl">
+                        <li>Integrated Open-Meteo REST API for global data fetching, implementing debounced search logic to reduce network overhead by 15%.</li>
+                        <li>Utilized Provider for scalable state management, ensuring seamless data synchronization across multiple application screens.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience & Training -->
+            <div class="sec">
+                <div class="sec-hd">Experience &amp; Training</div>
+                <div class="item">
+                    <div class="item-top">
+                        <div class="item-title">Cyber Security Enrichment Program</div>
+                        <div class="item-date">JAN 2026</div>
+                    </div>
+                    <div class="item-sub">Hackers Gurukul</div>
+                    <div class="item-meta">Hyderabad, India</div>
+                    <ul class="bl">
+                        <li>Participated in hands-on laboratories focused on identifying vulnerabilities and implementing robust information security principles.</li>
+                        <li>Strengthened collaborative problem-solving skills in high-stakes simulated security environments, working in a 4-person team to mitigate 10+ mock threats.</li>
+                        <li>Documented security protocols and threat assessment reports, enhancing technical writing and team communication standards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="sec">
+                <div class="sec-hd">Certifications</div>
+
+                <div class="mini-item">
+                    <div class="cert-top">
+                        <div class="cert-name">Python for Data Science <span class="score-tag">Elite + Silver</span></div>
+                        <div class="item-date">APR 2026</div>
+                    </div>
+                    <div class="cert-org">NPTEL — IIT Madras &nbsp;|&nbsp; 75% Score</div>
+                    <div class="cert-id">Credential ID: NPTEL26CS80S357303782</div>
+                </div>
+
+                <div class="mini-item">
+                    <div class="cert-top">
+                        <div class="cert-name">Database Management Systems <span class="score-tag">Elite + Silver</span></div>
+                        <div class="item-date">SEP 2025</div>
+                    </div>
+                    <div class="cert-org">NPTEL — IIT Madras &nbsp;|&nbsp; 78% Score</div>
+                    <div class="cert-id">Credential ID: NPTEL25CS145S537001497</div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="sec">
+                <div class="sec-hd">Education</div>
+
+                <div class="mini-item">
+                    <div class="item-top">
+                        <div class="edu-deg">Bachelor of Technology — Computer Science &amp; Engineering</div>
+                        <div class="item-date">AUG 2023 – JUN 2027</div>
+                    </div>
+                    <div class="edu-sch">NNRESGI, Hyderabad</div>
+                    <div class="edu-note">Relevant coursework: Data Structures, Algorithms, OOP, DBMS, Software Architecture, Technical Writing</div>
+                </div>
+
+                <div class="mini-item">
+                    <div class="item-top">
+                        <div class="edu-deg">Intermediate (Class 12)</div>
+                        <div class="item-date">JUL 2021 – MAY 2023</div>
+                    </div>
+                    <div class="edu-sch">Deccans New Chaitanya Junior College, Hyderabad</div>
+                    <div class="edu-note">MPC Stream &nbsp;·&nbsp; Achieved Grade B</div>
+                </div>
+
+                <div class="mini-item">
+                    <div class="item-top">
+                        <div class="edu-deg">High School (Class 10)</div>
+                        <div class="item-date">JUN 2011 – MAR 2021</div>
+                    </div>
+                    <div class="edu-sch">Shakuntala Vidyaniketan Grammar High School, Hyderabad</div>
+                    <div class="edu-note">Mathematics & Science &nbsp;·&nbsp; Achieved Grade A+</div>
+                </div>
+            </div>
+
+        </div><!-- /main -->
+
+        <!-- SIDEBAR -->
+        <div class="side">
+
+            <!-- Technical Skills -->
+            <div class="side-sec">
+                <div class="side-hd">Technical Skills</div>
+
+                <div class="sk-cat">Languages</div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">C</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Dart</span>
+                </div>
+
+                <div class="sk-cat">Frameworks &amp; Tools</div>
+                <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Git / GitHub</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Chart.js</span>
+                    <span class="tag">Lottie</span>
+                </div>
+
+                <div class="sk-cat">Core Concepts</div>
+                <div class="tags">
+                    <span class="tag">DSA</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">DBMS</span>
+                    <span class="tag">SDLC</span>
+                    <span class="tag">Agile</span>
+                    <span class="tag">DevOps</span>
+                    <span class="tag">REST API</span>
+                </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="side-sec">
+                <div class="side-hd">Professional</div>
+                <div class="soft-item">Technical Writing</div>
+                <div class="soft-item">Problem Solving</div>
+                <div class="soft-item">Critical Thinking</div>
+                <div class="soft-item">Team Collaboration</div>
+                <div class="soft-item">Fast Learner</div>
+            </div>
+
+            <!-- Languages -->
+            <div class="side-sec">
+                <div class="side-hd">Languages</div>
+                <div class="lang-r">
+                    <div class="lang-n">English <span class="lang-l">Professional</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
+                </div>
+                <div class="lang-r">
+                    <div class="lang-n">Hindi <span class="lang-l">Native</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width:95%"></div></div>
+                </div>
+                <div class="lang-r">
+                    <div class="lang-n">Urdu <span class="lang-l">Native</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width:92%"></div></div>
+                </div>
+                <div class="lang-r">
+                    <div class="lang-n">Telugu <span class="lang-l">Fluent</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
+                </div>
+            </div>
+
+        </div><!-- /side -->
+
+    </div><!-- /body -->
+
+</div><!-- /resume -->
+
+</body>
+</html>
