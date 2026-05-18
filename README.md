@@ -131,8 +131,6 @@ To clone, explore, and run this repository locally, execute the following comman
 
 * **Live Portfolio Link:** [https://md-rounaq-ali.netlify.app](https://md-rounaq-ali.netlify.app)
 * **Direct Professional Contact:** [LinkedIn Profile](https://www.linkedin.com/in/md-rounaq-ali/)
-* **Email Communication:** tabrasali7@gmail.com
-* **Verified WhatsApp Channel:** [+91 9030059421](https://wa.me/919030059421)
 
 ---
 
