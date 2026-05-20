@@ -418,6 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
                              <strong>DevOps/Tools:</strong> GitHub, Git, MySQL, Devops, Network Security</div>`;
                 } else if (cmdLower === 'projects') {
                     reply = `<div class="terminal-line output-text"><strong>Featured Projects:</strong><br>
+                             - <strong>VoxCalc</strong> (Flutter, Dart, Google ML Kit AI computational suite)<br>
                              - <strong>Block Crush</strong> (Flutter, Dart, 60+ FPS game)<br>
                              - <strong>FinTrack</strong> (Flask, MySQL tracker)<br>
                              - <strong>Weather Intel</strong> (Flutter, REST API)</div>`;

@@ -68,7 +68,7 @@ Below is a map of the commands built directly into the CLI controller:
 | `help` | Lists Options | Renders a custom list of all available commands |
 | `about` | Prints Bio | Displays graduation year, academic institution, and developer specialties |
 | `skills` | Renders Stack | Generates a structured list of core languages, frameworks, and tools |
-| `projects` | Details Assets | Returns live links and tech stacks for *Block Crush*, *FinTrack*, and *Weather Intel* |
+| `projects` | Details Assets | Returns live links and tech stacks for *VoxCalc*, *Block Crush*, *FinTrack*, and *Weather Intel* |
 | `contact` | Prints Channels | Outlines instant direct channels (Email, WhatsApp, Location) |
 | `clear` | Clears Screen | Flushes DOM history inside the terminal card console |
 
@@ -95,6 +95,7 @@ portfolio-website/
 │   ├── block-crush.jpg       # Flutter Puzzle Game preview screen
 │   ├── fintrack.png          # Python Finance Tracker preview panel
 │   ├── weather.png           # Flutter live API Weather preview panel
+│   ├── voxcalc.jpg           # Flutter AI Computational Suite preview panel
 │   ├── profile-avatar.png    # Professional profile representation
 │   ├── nptel-logo.png        # Verified NPTEL certification logo badge
 │   ├── favicon.svg           # Branded site favicon vector
