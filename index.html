@@ -46,7 +46,26 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    <!-- Critical Resource Preloads (Performance Upgrade) -->
+    <link rel="preload" href="assets/profile-avatar.png" as="image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
+
+    <!-- JSON-LD: BreadcrumbList for Google Rich Snippet Navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://md-rounaq-ali.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://md-rounaq-ali.netlify.app/#projects" },
+        { "@type": "ListItem", "position": 3, "name": "Skills", "item": "https://md-rounaq-ali.netlify.app/#skills" },
+        { "@type": "ListItem", "position": 4, "name": "Certifications", "item": "https://md-rounaq-ali.netlify.app/#certifications" },
+        { "@type": "ListItem", "position": 5, "name": "Resume", "item": "https://md-rounaq-ali.netlify.app/assets/resume.html" }
+      ]
+    }
+    </script>
+
 
     <!-- JSON-LD SEO Structured Data: Person -->
     <script type="application/ld+json">
@@ -254,7 +273,10 @@
                 <div class="about-image animate-on-scroll"
                     style="display:flex;align-items:center;justify-content:center;">
                     <div class="image-frame">
-                        <img src="assets/profile-avatar.png" alt="Md Rounaq Ali - Profile" id="aboutImage">
+                        <img src="assets/profile-avatar.png"
+                            alt="Md Rounaq Ali - Flutter and Python Developer from Hyderabad India, B.Tech CSE student at NNRESGI graduating 2027"
+                            id="aboutImage"
+                            width="320" height="320">
                         <div class="image-border"></div>
                     </div>
                 </div>
@@ -446,7 +468,9 @@
                 <!-- Project 1 -->
                 <div class="project-card glass-card animate-on-scroll">
                     <div class="project-image parallax-wrap">
-                        <img src="assets/block-crush.jpg" alt="Block Crush Preview" class="p-img parallax-img">
+                        <img src="assets/block-crush.jpg"
+                            alt="Block Crush - Flutter mobile puzzle game achieving 60+ FPS, built by Md Rounaq Ali"
+                            class="p-img parallax-img" loading="lazy" width="600" height="400">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span>Flutter</span>
@@ -471,7 +495,9 @@
                 <!-- Project 2 -->
                 <div class="project-card glass-card animate-on-scroll">
                     <div class="project-image parallax-wrap">
-                        <img src="assets/fintrack.png" alt="FinTrack Preview" class="p-img parallax-img">
+                        <img src="assets/fintrack.png"
+                            alt="FinTrack - Python Flask MySQL personal finance tracker web app built by Md Rounaq Ali"
+                            class="p-img parallax-img" loading="lazy" width="600" height="400">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span>Python</span>
@@ -496,7 +522,9 @@
                 <!-- Project 3 -->
                 <div class="project-card glass-card animate-on-scroll">
                     <div class="project-image parallax-wrap">
-                        <img src="assets/weather.png" alt="Weather Intel Preview" class="p-img parallax-img">
+                        <img src="assets/weather.png"
+                            alt="Weather Intel - Flutter real-time weather app with REST API integration by Md Rounaq Ali"
+                            class="p-img parallax-img" loading="lazy" width="600" height="400">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span>Flutter</span>
@@ -521,7 +549,9 @@
                 <!-- Project 4 -->
                 <div class="project-card glass-card animate-on-scroll">
                     <div class="project-image parallax-wrap">
-                        <img src="assets/voxcalc.jpg" alt="VoxCalc Preview" class="p-img parallax-img">
+                        <img src="assets/voxcalc.jpg"
+                            alt="VoxCalc - AI-Inspired Flutter computational suite with Google ML Kit OCR and voice NLP by Md Rounaq Ali"
+                            class="p-img parallax-img" loading="lazy" width="600" height="400">
                         <div class="project-overlay">
                             <div class="project-tech">
                                 <span>Flutter</span>
