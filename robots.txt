@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://md-rounaq-ali.netlify.app/sitemap.xml
