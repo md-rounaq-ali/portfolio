@@ -92,6 +92,7 @@ This project has been structured strictly to match production-grade engineering 
 ```text
 portfolio-website/
 ├── assets/
+│   ├── nexbrief.jpg          # IT Newsletter Platform preview screen
 │   ├── block-crush.jpg       # Flutter Puzzle Game preview screen
 │   ├── fintrack.png          # Python Finance Tracker preview panel
 │   ├── weather.png           # Flutter live API Weather preview panel
