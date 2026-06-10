@@ -95,7 +95,7 @@ portfolio-website/
 │   ├── nexbrief.jpg          # IT Newsletter Platform preview screen
 │   ├── block-crush.jpg       # Flutter Puzzle Game preview screen
 │   ├── fintrack.png          # Python Finance Tracker preview panel
-│   ├── weather.png           # Flutter live API Weather preview panel
+│   ├── weather.jpg           # Flutter live API Weather preview panel
 │   ├── voxcalc.jpg           # Flutter AI Computational Suite preview panel
 │   ├── profile-avatar.png    # Professional profile representation
 │   ├── nptel-logo.png        # Verified NPTEL certification logo badge
