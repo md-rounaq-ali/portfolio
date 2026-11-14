@@ -546,7 +546,7 @@ body.light-mode .cursor-glow { opacity: 0.5; }
 
 .project-placeholder {
     font-size: 4rem;
-    color: var(--primary-color);
+    color: var(--accent-primary);
     opacity: 0.5;
     transition: all 0.5s ease;
 }
@@ -586,7 +586,7 @@ body.light-mode .cursor-glow { opacity: 0.5; }
 .project-tech span {
     padding: 5px 12px;
     background: rgba(99, 102, 241, 0.2);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--accent-primary);
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -603,7 +603,7 @@ body.light-mode .cursor-glow { opacity: 0.5; }
 .project-content h3 {
     font-size: 1.25rem;
     margin-bottom: 12px;
-    color: var(--text-color);
+    color: var(--text-primary);
 }
 
 .project-content p {
@@ -622,7 +622,7 @@ body.light-mode .cursor-glow { opacity: 0.5; }
 .project-link {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--accent-primary);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -631,7 +631,7 @@ body.light-mode .cursor-glow { opacity: 0.5; }
 }
 
 .project-link:hover {
-    color: var(--secondary-color);
+    color: var(--accent-secondary);
     transform: translateX(3px);
 }
 
