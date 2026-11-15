@@ -9,417 +9,402 @@
     <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; font-size: 13px; line-height: 1.6; }
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #eef2f6;
+            color: #111827;
+            font-size: 8.6pt;
+            line-height: 1.3;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== Download Button ===== */
         .print-btn {
-            position: fixed; top: 15px; right: 15px; z-index: 999;
-            background: #1e1b4b; color: #fff; border: none;
-            padding: 10px 22px; border-radius: 8px; font-size: 0.85rem;
-            font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+            position: fixed;
+            top: 16px; right: 20px;
+            z-index: 1000;
+            background: #111827;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.2s;
         }
-        .print-btn:hover { transform: translateY(-1px); }
+        .print-btn:hover { background: #1f2937; transform: translateY(-1px); }
 
-        .resume {
-            width: 210mm; min-height: 297mm;
-            margin: 30px auto; background: #fff;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
-        }
-
-        /* ── HEADER ── */
-        .hdr { background: #1e1b4b; padding: 35px 45px 30px; color: #fff; }
-        .hdr-inner { display: flex; justify-content: space-between; align-items: flex-start; }
-        .hdr h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.8px; line-height: 1; }
-        .hdr-role { font-size: 1rem; color: #a5b4fc; font-weight: 500; margin-top: 8px; letter-spacing: 0.4px; }
-        .hdr-contact { text-align: right; }
-        .hdr-c { font-size: 0.8rem; color: #c7d2fe; margin-bottom: 6px; }
-        .hdr-c a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
-
-        /* ── BODY ── */
-        .body { display: grid; grid-template-columns: 1fr 220px; }
-
-        /* ── MAIN ── */
-        .main { padding: 30px 35px 30px 45px; border-right: 1px solid #edf2f7; }
-
-        .sec { margin-bottom: 26px; }
-        .sec:last-child { margin-bottom: 0; }
-
-        .sec-hd {
-            font-size: 0.7rem; font-weight: 800;
-            text-transform: uppercase; letter-spacing: 2.8px;
-            color: #1e1b4b; border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 6px; margin-bottom: 16px;
-            display: flex; align-items: center;
+        /* ===== A4 Page ===== */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 24px auto;
+            background: #fff;
+            padding: 8.5mm 13mm 8mm 13mm;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         }
 
-        /* Summary */
-        .sum-p { font-size: 0.88rem; color: #4a5568; line-height: 1.8; text-align: justify; }
+        /* ===== Header ===== */
+        .header { text-align: center; margin-bottom: 6px; }
+        .name {
+            font-size: 18pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #0f172a;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+        .contact-row {
+            font-size: 8pt;
+            color: #334155;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px 5px;
+        }
+        .contact-row a { color: #0f172a; text-decoration: none; font-weight: 500; }
+        .contact-row a:hover { text-decoration: underline; }
+        .sep { color: #94a3b8; }
 
-        /* Items */
-        .item { margin-bottom: 18px; position: relative; }
+        /* ===== Sections ===== */
+        .section { margin-bottom: 5.5px; }
+        .section-title {
+            font-size: 9pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f172a;
+            border-bottom: 1.2px solid #0f172a;
+            padding-bottom: 1px;
+            margin-bottom: 3px;
+        }
+
+        /* ===== Items ===== */
+        .item { margin-bottom: 3.5px; }
         .item:last-child { margin-bottom: 0; }
-        .item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
-        .item-title { font-size: 0.95rem; font-weight: 700; color: #1a202c; }
-        .item-date { font-size: 0.75rem; color: #718096; white-space: nowrap; font-weight: 600; text-transform: uppercase; }
-        .item-sub { font-size: 0.82rem; color: #4c1d95; font-weight: 700; margin-top: 3px; }
-        .item-meta { font-size: 0.75rem; color: #718096; margin-top: 2px; font-style: italic; }
 
-        /* Tech badge */
-        .tech-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
-        .tech { font-size: 0.68rem; color: #4c1d95; font-weight: 700; background: #f5f3ff; border: 1px solid #ddd6fe; padding: 2px 9px; border-radius: 5px; }
-
-        /* Bullet list */
-        ul.bl { list-style: none; padding: 0; margin-top: 7px; }
-        ul.bl li { position: relative; padding-left: 15px; margin-bottom: 6px; font-size: 0.85rem; color: #4a5568; line-height: 1.7; }
-        ul.bl li::before { content: '•'; color: #6366f1; font-size: 1.2rem; position: absolute; left: 0; top: -3px; }
-
-        /* Edu/Cert Spacing */
-        .mini-item { margin-bottom: 12px; }
-        .mini-item:last-child { margin-bottom: 0; }
-        .score-tag { background: #fef3c7; color: #92400e; border-radius: 4px; padding: 1px 8px; font-size: 0.65rem; font-weight: 800; margin-left: 8px; border: 1px solid #fde68a; }
-
-        /* ── SIDEBAR ── */
-        .side { padding: 30px 22px; background: #f8fafc; }
-        .side-sec { margin-bottom: 28px; }
-        .side-sec:last-child { margin-bottom: 0; }
-        .side-hd {
-            font-size: 0.65rem; font-weight: 800;
-            text-transform: uppercase; letter-spacing: 2.2px;
-            color: #1e1b4b; border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 5px; margin-bottom: 14px;
+        .row-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 8.7pt;
         }
+        .title-bold { font-weight: 700; color: #0f172a; }
+        .meta-right {
+            font-weight: 600;
+            font-size: 8.2pt;
+            color: #334155;
+            white-space: nowrap;
+            text-align: right;
+            margin-left: 6px;
+        }
+        .row-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 8.2pt;
+            margin-top: 0.5px;
+            color: #334155;
+        }
+        .sub-italic { font-style: italic; color: #334155; }
+        .sub-italic strong { font-style: normal; font-weight: 600; color: #0f172a; }
+        .tech-tags { font-weight: 500; color: #475569; font-size: 7.9pt; }
 
-        /* Skills */
-        .sk-cat { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #718096; margin: 12px 0 6px; }
-        .sk-cat:first-child { margin-top: 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 5px; }
-        .tag { background: #fff; color: #4c1d95; border: 1px solid #e2e8f0; border-radius: 5px; padding: 3px 8px; font-size: 0.7rem; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }
+        /* ===== Bullets ===== */
+        ul.bullets {
+            list-style-type: disc;
+            margin-left: 13px;
+            margin-top: 1px;
+        }
+        ul.bullets li {
+            font-size: 8.2pt;
+            color: #1e293b;
+            line-height: 1.28;
+            margin-bottom: 1px;
+            padding-left: 1px;
+        }
+        ul.bullets li:last-child { margin-bottom: 0; }
+        ul.bullets li strong { font-weight: 600; color: #0f172a; }
 
-        /* Soft skills */
-        .soft-item { font-size: 0.8rem; color: #4a5568; margin-bottom: 7px; padding-left: 12px; position: relative; }
-        .soft-item::before { content: '–'; position: absolute; left: 0; color: #cbd5e0; }
+        /* ===== Skills ===== */
+        .skills-list { font-size: 8.2pt; line-height: 1.35; color: #1e293b; }
+        .skills-row { margin-bottom: 1.2px; }
+        .skills-row:last-child { margin-bottom: 0; }
+        .skill-cat { font-weight: 700; color: #0f172a; }
 
-        /* Languages */
-        .lang-r { margin-bottom: 10px; }
-        .lang-n { display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; color: #1a202c; margin-bottom: 4px; }
-        .lang-l { font-size: 0.68rem; color: #718096; font-weight: 400; }
-        .lang-bar { height: 4px; background: #e2e8f0; border-radius: 2px; overflow: hidden; }
-        .lang-fill { height: 100%; background: #1e1b4b; border-radius: 2px; }
+        /* ===== Certifications ===== */
+        .cert-item {
+            font-size: 8.2pt;
+            line-height: 1.28;
+            margin-bottom: 1.8px;
+            color: #1e293b;
+        }
+        .cert-item:last-child { margin-bottom: 0; }
+        .cert-item strong { font-weight: 700; color: #0f172a; }
+        .cert-badge { font-weight: 600; color: #047857; font-size: 7.8pt; }
+        .cert-meta { color: #475569; font-size: 7.8pt; }
+        .cert-view-link {
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 7.8pt;
+            text-decoration: underline;
+            margin-left: 3px;
+            white-space: nowrap;
+        }
+        .cert-view-link:hover { color: #4f46e5; }
+
+        /* ===== Print ===== */
+        @page { size: A4; margin: 8mm 12mm; }
 
         @media print {
+            html, body {
+                background: #fff !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                font-size: 8.5pt !important;
+                color: #000 !important;
+            }
+            .print-btn { display: none !important; }
+            .page {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                min-height: auto !important;
+            }
+            a { color: #000 !important; text-decoration: none !important; }
+            .section-title { border-bottom: 1.2px solid #000 !important; color: #000 !important; }
+            .title-bold, .name, .skill-cat, ul.bullets li strong, .cert-item strong { color: #000 !important; }
+            .cert-badge { color: #000 !important; font-weight: 700 !important; }
+        }
+
+        @media (max-width: 800px) {
             body { background: #fff; }
-            .resume { margin: 0; box-shadow: none; width: 100%; }
-            .print-btn { display: none; }
-            @page { size: A4; margin: 0; }
-            .main { border-right: 1px solid #edf2f7 !important; }
+            .page { width: 100%; margin: 0; padding: 16px; box-shadow: none; }
+            .print-btn { top: 10px; right: 10px; padding: 6px 12px; font-size: 11px; }
         }
     </style>
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
+<button class="print-btn" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+    </svg>
+    Download PDF
+</button>
 
-<div class="resume">
+<div class="page">
 
-    <!-- HEADER -->
-    <div class="hdr">
-        <div class="hdr-inner">
-            <div>
-                <h1>Md Rounaq Ali</h1>
-                <div class="hdr-role">Aspiring Software Developer &nbsp;·&nbsp; B.Tech CSE Student</div>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <h1 class="name">Md Rounaq Ali</h1>
+        <div class="contact-row">
+            <span>Hyderabad, India</span>
+            <span class="sep">•</span>
+            <span>+91 9030059421</span>
+            <span class="sep">•</span>
+            <a href="mailto:tabrasali7@gmail.com">tabrasali7@gmail.com</a>
+            <span class="sep">•</span>
+            <a href="https://linkedin.com/in/md-rounaq-ali" target="_blank" rel="noopener">linkedin.com/in/md-rounaq-ali</a>
+            <span class="sep">•</span>
+            <a href="https://github.com/md-rounaq-ali" target="_blank" rel="noopener">github.com/md-rounaq-ali</a>
+            <span class="sep">•</span>
+            <a href="https://md-rounaq-ali.netlify.app/" target="_blank" rel="noopener">md-rounaq-ali.netlify.app</a>
+        </div>
+    </header>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">Nalla Narasimha Reddy Education Society's Group of Institutions (NNRESGI)</span>
+                <span class="meta-right">Aug 2023 – Jun 2027</span>
             </div>
-            <div class="hdr-contact">
-                <div class="hdr-c"><a href="mailto:tabrasali7@gmail.com">tabrasali7@gmail.com</a></div>
-                <div class="hdr-c">+91 9030059421</div>
-                <div class="hdr-c">Hyderabad, Telangana, India</div>
-                <div class="hdr-c"><a href="https://linkedin.com/in/md-rounaq-ali">linkedin.com/in/md-rounaq-ali</a></div>
-                <div class="hdr-c"><a href="https://github.com/md-rounaq-ali">github.com/md-rounaq-ali</a></div>
+            <div class="row-sub">
+                <span class="sub-italic">Bachelor of Technology — Computer Science &amp; Engineering</span>
+                <span class="meta-right">Hyderabad, India</span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Coursework: Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, DevOps Fundamentals</span>
             </div>
         </div>
-    </div>
 
-    <!-- BODY -->
-    <div class="body">
-
-        <!-- MAIN COLUMN -->
-        <div class="main">
-
-            <!-- Professional Summary -->
-            <div class="sec">
-                <div class="sec-hd">Professional Summary</div>
-                <p class="sum-p">
-                    Computer Science Engineering student with expertise in Python, Java, and Cross-Platform Mobile Development (Flutter/Dart). Successfully delivered 5+ technical projects including high-performance mobile games and full-stack applications. Proficient in architecting user-centric solutions using MySQL and DevOps principles. Strong technical writer and collaborative team player with a focus on scalable software engineering and information security.
-                </p>
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">Deccan's New Chaitanya Junior College</span>
+                <span class="meta-right">Jul 2021 – May 2023</span>
             </div>
-
-            <!-- Key Projects -->
-            <div class="sec">
-                <div class="sec-hd">Key Projects</div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">NexBrief — Dedicated IT Newsletter Platform</div>
-                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/nexbrief-daily-it-intelligence-platform" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/nexbrief-daily-it-intelligence-platform</a></div>
-                        <div class="item-date">JUN 2026</div>
-                    </div>
-                    <div class="tech-wrap">
-                        <span class="tech">AI & IT</span>
-                        <span class="tech">Content Curation</span>
-                        <span class="tech">Automation</span>
-                        <span class="tech">Web Platform</span>
-                    </div>
-                    <ul class="bl">
-                        <li>Engineered India's first dedicated IT newsletter platform delivering curated tech news (50% IT & AI, 30% Education & Research, 20% World News) every morning.</li>
-                        <li>Automated content aggregation and scheduling logic to ensure strict 7 AM IST daily delivery to active subscribers.</li>
-                        <li>Designed a highly responsive and engaging user interface focused on readability and immediate access to top industry insights.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">VoxCalc — AI-Inspired Next-Gen Computational Suite</div>
-                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/VoxCalc" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/VoxCalc</a></div>
-                        <div class="item-date">MAY 2026</div>
-                    </div>
-                    <div class="tech-wrap">
-                        <span class="tech">Flutter</span>
-                        <span class="tech">Dart</span>
-                        <span class="tech">Google ML Kit</span>
-                        <span class="tech">Speech NLP API</span>
-                        <span class="tech">State Management</span>
-                    </div>
-                    <ul class="bl">
-                        <li>Engineered a high-performance cross-platform mathematical suite in Flutter featuring voice-to-math AI natural language parsing and algebraic graph rendering.</li>
-                        <li>Integrated Google ML Kit OCR scanner for real-time camera-based handwriting recognition, parsing complex equations locally to protect user data privacy.</li>
-                        <li>Designed a high-performance mathematical parser and dynamic graphing canvas, rendering precise 2D curves dynamically without rendering lag.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">Block Crush — Premium Mobile Puzzle Game</div>
-                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/block-crush-game" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/block-crush-game</a></div>
-                        <div class="item-date">MAR 2026</div>
-                    </div>
-                    <div class="tech-wrap">
-                        <span class="tech">Flutter</span>
-                        <span class="tech">Dart</span>
-                        <span class="tech">Provider</span>
-                        <span class="tech">Lottie</span>
-                    </div>
-                    <ul class="bl">
-                        <li>Engineered a high-fidelity mobile puzzle game, achieving a consistent 60+ FPS on mobile devices through RepaintBoundary optimization.</li>
-                        <li>Implemented a dynamic theme engine and immersive animations using Lottie, resulting in a 25% increase in user session duration during testing.</li>
-                        <li>Collaborated with peer testers to refine game mechanics, reducing bug reports by 40% through rigorous unit testing and SDLC methodologies.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">FinTrack — Full-Stack Personal Finance Tracker</div>
-                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/personal-finance-tracker" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/personal-finance-tracker</a></div>
-                        <div class="item-date">DEC 2025</div>
-                    </div>
-                    <div class="tech-wrap">
-                        <span class="tech">Python</span>
-                        <span class="tech">Flask</span>
-                        <span class="tech">MySQL</span>
-                        <span class="tech">Chart.js</span>
-                    </div>
-                    <ul class="bl">
-                        <li>Architected a comprehensive financial management system with secure authentication, serving 50+ localized data points via a normalized relational database.</li>
-                        <li>Developed a real-time data visualization dashboard using Chart.js, improving financial health tracking efficiency by 30% for end-users.</li>
-                        <li>Authored technical documentation detailing the database schema and API endpoints to facilitate team maintenance and future scalability.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">Weather Intel — Real-time Weather Intelligence</div>
-                        <div class="item-meta"><a href="https://github.com/md-rounaq-ali/weather-app" style="color: #6366f1; text-decoration: none;">github.com/md-rounaq-ali/weather-app</a></div>
-                        <div class="item-date">OCT 2025</div>
-                    </div>
-                    <div class="tech-wrap">
-                        <span class="tech">Flutter</span>
-                        <span class="tech">REST API</span>
-                        <span class="tech">Geolocator</span>
-                        <span class="tech">State Management</span>
-                    </div>
-                    <ul class="bl">
-                        <li>Integrated Open-Meteo REST API for global data fetching, implementing debounced search logic to reduce network overhead by 15%.</li>
-                        <li>Utilized Provider for scalable state management, ensuring seamless data synchronization across multiple application screens.</li>
-                    </ul>
-                </div>
+            <div class="row-sub">
+                <span class="sub-italic">Intermediate (Class 12) — MPC Stream &nbsp;|&nbsp; <strong>Achieved Grade A</strong></span>
+                <span class="meta-right">Hyderabad, India</span>
             </div>
+        </div>
 
-            <!-- Experience & Training -->
-            <div class="sec">
-                <div class="sec-hd">Experience &amp; Training</div>
-                <div class="item">
-                    <div class="item-top">
-                        <div class="item-title">Cyber Security Enrichment Program</div>
-                        <div class="item-date">JAN 2026</div>
-                    </div>
-                    <div class="item-sub">Hackers Gurukul</div>
-                    <div class="item-meta">Hyderabad, India</div>
-                    <ul class="bl">
-                        <li>Participated in hands-on laboratories focused on identifying vulnerabilities and implementing robust information security principles.</li>
-                        <li>Strengthened collaborative problem-solving skills in high-stakes simulated security environments, working in a 4-person team to mitigate 10+ mock threats.</li>
-                        <li>Documented security protocols and threat assessment reports, enhancing technical writing and team communication standards.</li>
-                    </ul>
-                </div>
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">Shakuntala Grammar High School</span>
+                <span class="meta-right">Jun 2020 – Mar 2021</span>
             </div>
-
-            <!-- Certifications -->
-            <div class="sec">
-                <div class="sec-hd">Certifications</div>
-
-                <div class="mini-item">
-                    <div class="cert-top">
-                        <div class="cert-name">Programming in Java <span class="score-tag">Elite · 88%</span></div>
-                        <div class="item-date">OCT 2026</div>
-                    </div>
-                    <div class="cert-org">NPTEL — IIT Kharagpur &nbsp;|&nbsp; JUL–OCT 2026 (12 weeks)</div>
-                    <div class="cert-id">Credential ID: NPTEL26CS153S1268107543</div>
-                </div>
-
-                <div class="mini-item">
-                    <div class="cert-top">
-                        <div class="cert-name">Python for Data Science <span class="score-tag">Elite · 75%</span></div>
-                        <div class="item-date">FEB 2026</div>
-                    </div>
-                    <div class="cert-org">NPTEL — IIT Madras &nbsp;|&nbsp; JAN–FEB 2026 (4 weeks)</div>
-                    <div class="cert-id">Credential ID: NPTEL26CS80S357303782</div>
-                </div>
-
-                <div class="mini-item">
-                    <div class="cert-top">
-                        <div class="cert-name">Database Management Systems <span class="score-tag">Elite · 78% · Top 2%</span></div>
-                        <div class="item-date">SEP 2025</div>
-                    </div>
-                    <div class="cert-org">NPTEL — IIT Kharagpur &nbsp;|&nbsp; JUL–SEP 2025 (8 weeks)</div>
-                    <div class="cert-id">Credential ID: NPTEL25CS145S537001497</div>
-                </div>
+            <div class="row-sub">
+                <span class="sub-italic">Secondary School Certificate (Class 10) — Mathematics &amp; Science &nbsp;|&nbsp; <strong>Achieved Grade O</strong></span>
+                <span class="meta-right">Hyderabad, India</span>
             </div>
+        </div>
+    </section>
 
-            <!-- Education -->
-            <div class="sec">
-                <div class="sec-hd">Education</div>
-
-                <div class="mini-item">
-                    <div class="item-top">
-                        <div class="edu-deg">Bachelor of Technology — Computer Science &amp; Engineering</div>
-                        <div class="item-date">AUG 2023 – JUN 2027</div>
-                    </div>
-                    <div class="edu-sch">NNRESGI, Hyderabad</div>
-                    <div class="edu-note">Relevant coursework: Data Structures, Algorithms, OOP, DBMS, Software Architecture, Technical Writing</div>
-                </div>
-
-                <div class="mini-item">
-                    <div class="item-top">
-                        <div class="edu-deg">Intermediate (Class 12)</div>
-                        <div class="item-date">JUL 2021 – MAY 2023</div>
-                    </div>
-                    <div class="edu-sch">Deccan's New Chaitanya Junior College, Hyderabad</div>
-                    <div class="edu-note">MPC Stream &nbsp;·&nbsp; Achieved Grade A</div>
-                </div>
-
-                <div class="mini-item">
-                    <div class="item-top">
-                        <div class="edu-deg">High School (Class 10)</div>
-                        <div class="item-date">JUN 2020 – MAR 2021</div>
-                    </div>
-                    <div class="edu-sch">Shakuntala Grammar High School, Hyderabad</div>
-                    <div class="edu-note">Mathematics & Science &nbsp;·&nbsp; Achieved Grade O</div>
-                </div>
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-list">
+            <div class="skills-row">
+                <span class="skill-cat">Programming Languages:</span> Python, Java, C, Dart, SQL, HTML5, CSS3, JavaScript
             </div>
-
-        </div><!-- /main -->
-
-        <!-- SIDEBAR -->
-        <div class="side">
-
-            <!-- Technical Skills -->
-            <div class="side-sec">
-                <div class="side-hd">Technical Skills</div>
-
-                <div class="sk-cat">Languages</div>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">C</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Dart</span>
-                    <span class="tag">HTML / CSS</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-
-                <div class="sk-cat">Frameworks &amp; Tools</div>
-                <div class="tags">
-                    <span class="tag">Flutter</span>
-                    <span class="tag">Flask</span>
-                    <span class="tag">Git / GitHub</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">Chart.js</span>
-                    <span class="tag">Lottie</span>
-                    <span class="tag">Google ML Kit</span>
-                    <span class="tag">AI NLP</span>
-                </div>
-
-                <div class="sk-cat">Core Concepts</div>
-                <div class="tags">
-                    <span class="tag">DSA</span>
-                    <span class="tag">OOP</span>
-                    <span class="tag">DBMS</span>
-                    <span class="tag">SDLC</span>
-                    <span class="tag">Agile</span>
-                    <span class="tag">DevOps</span>
-                    <span class="tag">REST API</span>
-                </div>
+            <div class="skills-row">
+                <span class="skill-cat">Mobile &amp; Web Frameworks:</span> Flutter (Android/iOS/Web), Flask, RESTful APIs, Google ML Kit, Provider, Chart.js, Lottie
             </div>
-
-            <!-- Professional Skills -->
-            <div class="side-sec">
-                <div class="side-hd">Professional</div>
-                <div class="soft-item">Technical Writing</div>
-                <div class="soft-item">Problem Solving</div>
-                <div class="soft-item">Critical Thinking</div>
-                <div class="soft-item">Team Collaboration</div>
-                <div class="soft-item">Fast Learner</div>
+            <div class="skills-row">
+                <span class="skill-cat">Databases &amp; Tools:</span> MySQL, Git, GitHub, Android Studio, VS Code, Postman, Linux Shell, Netlify, Render
             </div>
-
-            <!-- Languages -->
-            <div class="side-sec">
-                <div class="side-hd">Languages</div>
-                <div class="lang-r">
-                    <div class="lang-n">English <span class="lang-l">Professional</span></div>
-                    <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
-                </div>
-                <div class="lang-r">
-                    <div class="lang-n">Hindi <span class="lang-l">Native</span></div>
-                    <div class="lang-bar"><div class="lang-fill" style="width:95%"></div></div>
-                </div>
-                <div class="lang-r">
-                    <div class="lang-n">Urdu <span class="lang-l">Native</span></div>
-                    <div class="lang-bar"><div class="lang-fill" style="width:92%"></div></div>
-                </div>
-                <div class="lang-r">
-                    <div class="lang-n">Telugu <span class="lang-l">Fluent</span></div>
-                    <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
-                </div>
+            <div class="skills-row">
+                <span class="skill-cat">Core CS Concepts:</span> Data Structures &amp; Algorithms (DSA), OOP, DBMS, Operating Systems, Information Security
             </div>
+        </div>
+    </section>
 
-        </div><!-- /side -->
+    <!-- ==================== KEY PROJECTS ==================== -->
+    <section class="section">
+        <h2 class="section-title">Key Projects</h2>
 
-    </div><!-- /body -->
+        <!-- NexBrief -->
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">NexBrief — Dedicated IT Intelligence Newsletter Platform</span>
+                <span class="meta-right">Jun 2026 &nbsp;|&nbsp; <a href="https://nexbrief-news.onrender.com/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Python, Flask, AI Content Curation, Automated Scheduling, Render</span>
+            </div>
+            <ul class="bullets">
+                <li>Architected India's first dedicated IT newsletter platform delivering <strong>curated tech news</strong> (50% IT/AI, 30% Research) to subscribers daily at 7 AM IST.</li>
+                <li>Built automated content aggregation pipelines with debounced fetch routines, eliminating <strong>redundant API queries</strong> and cutting load time by 40%.</li>
+            </ul>
+        </div>
 
-</div><!-- /resume -->
+        <!-- VoxCalc -->
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">VoxCalc — AI-Powered Cross-Platform Computation Suite</span>
+                <span class="meta-right">May 2026 &nbsp;|&nbsp; <a href="https://md-rounaq-ali.github.io/VoxCalc/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Flutter, Dart, Google ML Kit OCR, Voice NLP, Custom Canvas</span>
+            </div>
+            <ul class="bullets">
+                <li>Engineered cross-platform calculator integrating <strong>Google ML Kit OCR</strong> for real-time camera formula scanning and voice-NLP input parsing.</li>
+                <li>Built 2D dynamic coordinate graphing engine rendering mathematical curves at a stable <strong>60 FPS</strong> with zero UI thread blocking.</li>
+            </ul>
+        </div>
+
+        <!-- Block Crush -->
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">Block Crush — High-Performance Mobile Puzzle Game</span>
+                <span class="meta-right">Mar 2026 &nbsp;|&nbsp; <a href="https://md-rounaq-ali.github.io/block-crush-game/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Flutter, Dart, RepaintBoundary Optimization, Provider, Lottie</span>
+            </div>
+            <ul class="bullets">
+                <li>Built mobile puzzle game achieving <strong>60+ FPS</strong> on low-end devices via RepaintBoundary layer isolation and selective widget rebuilds.</li>
+                <li>Implemented reactive state management with Provider and Lottie animations, boosting user session duration by <strong>25%</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- FinTrack -->
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">FinTrack — Full-Stack Personal Finance Tracker</span>
+                <span class="meta-right">Dec 2025 &nbsp;|&nbsp; <a href="https://personal-finance-tracker-l1n2.onrender.com/login?next=%2F" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Python, Flask, MySQL, Chart.js, RESTful Architecture</span>
+            </div>
+            <ul class="bullets">
+                <li>Developed full-stack web app with secure session-based auth and a <strong>3NF normalized MySQL</strong> database schema supporting multi-user data integrity.</li>
+                <li>Created real-time expenditure visualization dashboards via Chart.js, improving monthly budget tracking efficiency by <strong>30%</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & TRAINING ==================== -->
+    <section class="section">
+        <h2 class="section-title">Experience &amp; Training</h2>
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">Cyber Security Student Enrichment Program</span>
+                <span class="meta-right">Jan 2026 &nbsp;|&nbsp; Hyderabad, India</span>
+            </div>
+            <div class="row-sub">
+                <span class="sub-italic">Hackers Gurukul — Information Security &amp; Vulnerability Assessment</span>
+            </div>
+            <ul class="bullets">
+                <li>Conducted hands-on labs analyzing <strong>network vulnerability vectors</strong>, packet tracing, and OWASP security principles.</li>
+                <li>Collaborated in a 4-person team to detect and neutralize <strong>10+ simulated cyber threats</strong> in timed defense simulations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS & ACHIEVEMENTS ==================== -->
+    <section class="section" style="margin-bottom:0;">
+        <h2 class="section-title">Certifications &amp; Achievements</h2>
+
+        <div class="cert-item">
+            • <strong>Programming in Java</strong> — <em>NPTEL | IIT Kharagpur</em> <span class="cert-badge">[Elite · 88%]</span>
+            <span class="cert-meta">— 12-Week Intensive (Jul–Oct 2026) | ID: NPTEL26CS153S1268107543</span>
+            <a href="https://md-rounaq-ali.netlify.app/assets/PROGRAMMING_IN_JAVA-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
+        </div>
+
+        <div class="cert-item">
+            • <strong>Python for Data Science</strong> — <em>NPTEL | IIT Madras</em> <span class="cert-badge">[Elite · 75%]</span>
+            <span class="cert-meta">— 4-Week Specialized (Jan–Feb 2026) | ID: NPTEL26CS80S357303782</span>
+            <a href="https://md-rounaq-ali.netlify.app/assets/PYTHON_FOR_DATA_SCIENCE-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
+        </div>
+
+        <div class="cert-item">
+            • <strong>Database Management Systems</strong> — <em>NPTEL | IIT Kharagpur</em> <span class="cert-badge">[Elite · 78% · Top 2% in India]</span>
+            <span class="cert-meta">— 8-Week Core (Jul–Sep 2025) | ID: NPTEL25CS145S537001497</span>
+            <a href="https://md-rounaq-ali.netlify.app/assets/DATABASE_MANAGEMENT_SYSTEM-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
+        </div>
+
+        <div class="cert-item">
+            • <strong>Production Deployments:</strong> Architected and deployed <strong>5+ software products</strong> across Flutter, Python, and Web — all publicly available on GitHub with live demos.
+        </div>
+    </section>
+
+</div>
 
 </body>
 </html>
