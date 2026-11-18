@@ -1,0 +1,15 @@
+/favicon.ico
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+
+/favicon*
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+
+/assets/favicon*
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+
+/site.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Access-Control-Allow-Origin: *
