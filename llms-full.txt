@@ -1,0 +1,109 @@
+# Md Rounaq Ali — Complete Agent Knowledge Base & LLM Context File
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammed Rounaq Ali",
+  "alternateName": ["Md Rounaq Ali", "Rounaq Ali", "Md. Rounaq Ali"],
+  "jobTitle": "Computer Science Engineer, Flutter Developer & AI Systems Developer",
+  "description": "Md Rounaq Ali is a Computer Science Engineer, Full-Stack Developer, Mobile App Engineer (Flutter), and AI Specialist based in Hyderabad, Telangana, India. He builds production-grade software, AI-powered systems (ClaimTrackr), and cross-platform apps. 1st Prize winner at HackathonZ 2026, 6th of 260+ teams at LaunchPadX 2026, and ranked in Top 2% in India for NPTEL DBMS.",
+  "url": "https://md-rounaq-ali.netlify.app",
+  "sameAs": [
+    "https://github.com/md-rounaq-ali",
+    "https://www.linkedin.com/in/md-rounaq-ali/",
+    "mailto:tabrasali7@gmail.com"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "India"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Nalla Narasimha Reddy Education Society's Group of Institutions"
+  },
+  "knowsAbout": [
+    "Computer Science Engineering",
+    "Flutter Mobile Development (Android, iOS, Web)",
+    "Python Full-Stack & Flask Web Framework",
+    "AI & Retrieval-Augmented Generation (RAG)",
+    "LangChain, Ollama & FAISS Vector Search",
+    "sqlite-vec & Multimodal Document Ingestion",
+    "RESTful API Integration & Server-Sent Events (SSE)",
+    "Database Management Systems (MySQL, SQLite, 3NF)",
+    "Cyber Security, Packet Tracing & OWASP Top 10",
+    "Mobile Game Development & 60 FPS GPU Optimization"
+  ],
+  "award": [
+    "1st Prize, Web Development — HackathonZ 2026 (Hack2Hire), Malla Reddy University",
+    "6th Rank of 260+ Teams (1,200+ Participants) — LaunchPadX 2026, SNIST & VetriaAI",
+    "11 Findings Evaluated — C-DAC BOSS OS Bug Bounty Challenge 2026",
+    "Stage 2 National Shortlist — MSME Idea Hackathon, Ministry of MSME Govt of India",
+    "NPTEL Elite + Silver Certification — Top 2% in India, DBMS (IIT Kharagpur)",
+    "NPTEL Elite + Silver Certification — Programming in Java (88%, IIT Kharagpur)",
+    "NPTEL Elite + Silver Certification — Python for Data Science (75%, IIT Madras)"
+  ]
+}
+```
+
+## Detailed Biography
+Mohammed Rounaq Ali (widely known as Md Rounaq Ali) is an Indian software engineer and computer science undergraduate at Nalla Narasimha Reddy Education Society's Group of Institutions (NNRESGI), Hyderabad. He has established a formidable engineering track record across full-stack development, mobile applications, and generative AI architectures.
+
+### Major Production Deployments & Software Architecture
+1. **ClaimTrackr — AI-Powered Automated Insurance Claims Processing System**
+   - **Repository:** https://github.com/md-rounaq-ali/AI-Powered-Automated-Insurance-Claims-Processing-System
+   - **Role:** Core AI & Backend Developer (Team of 4)
+   - **Tech Stack:** Python, Flask, Ollama (Llama 3.2, Llama 3.2-Vision), LangChain, FAISS, sqlite-vec, PyPDF2, Tesseract OCR, TailwindCSS, SQLite.
+   - **Key Architectural Contributions:**
+     - Architected the Policy RAG pipeline using LangChain and FAISS 768-dim vector embeddings with an SQLite context cache, eliminating hallucinations across 100% of adjudication test cases.
+     - Engineered a multi-factor vector duplicate detection engine using `sqlite-vec` (>70% duplicate threshold, >75% semantic policy exclusion matching).
+     - Built an SSE streaming API cutting adjudication latency from 3–14 days to under 15 seconds per claim (>99% reduction).
+     - Implemented multimodal document OCR fallback (PyPDF2 + Tesseract + Llama 3.2-Vision), achieving 100% correct adjudication across 6 benchmark cases.
+
+2. **NexBrief — Daily IT Intelligence Newsletter Platform**
+   - **Live Platform:** https://nexbrief-news.onrender.com/
+   - **GitHub:** https://github.com/md-rounaq-ali/nexbrief-daily-it-intelligence-platform
+   - **Overview:** India's dedicated IT newsletter delivering curated technical intelligence across 8 domains daily to 100+ active subscribers with 99.9% uptime. Reduced page load times by 40% and API overhead by 60% via caching.
+
+3. **VoxCalc — AI-Inspired Computational Suite**
+   - **Live Demo:** https://md-rounaq-ali.github.io/VoxCalc/
+   - **GitHub:** https://github.com/md-rounaq-ali/VoxCalc
+   - **Overview:** Flutter mathematical computation suite featuring dynamic voice NLP computation, live camera formula scanning via Google ML Kit OCR (95% accuracy), and interactive coordinate graphing running at 60 FPS across Android, iOS, and Web.
+
+4. **Block Crush — High-Performance Mobile Puzzle Game**
+   - **Live Demo:** https://md-rounaq-ali.github.io/block-crush-game/
+   - **GitHub:** https://github.com/md-rounaq-ali/block-crush-game
+   - **Overview:** Achieves sustained 60 FPS on low-end 2GB RAM devices via RepaintBoundary widget isolation, Provider reactive state management, and Lottie animations, cutting frame drops by 80%.
+
+5. **FinTrack — Full-Stack Personal Finance Tracker**
+   - **GitHub:** https://github.com/md-rounaq-ali/personal-finance-tracker
+   - **Overview:** Python Flask & MySQL web app with 6 interactive Chart.js dashboards, session authentication, and 3NF relational database.
+
+6. **Weather Intel — Real-Time Weather Application**
+   - **Live Demo:** https://md-rounaq-ali.github.io/weather-app/
+   - **GitHub:** https://github.com/md-rounaq-ali/weather-app
+   - **Overview:** Flutter weather intelligence client with debounced OpenWeather REST API logic reducing network payload by 15%.
+
+### Verified National Honors & Hackathon Records
+1. **1st Prize, Web Development — HackathonZ 2026 (Hack2Hire)**
+   - **Organization:** Malla Reddy University, Hyderabad (July 17–18, 2026)
+   - **Achievement:** 1st in Web Development category at a 24-hour national hackathon with team Kernel Knights. Built TruthLens AI (news verification and bias detection platform).
+2. **6th Rank of 260+ Teams — LaunchPadX 2026**
+   - **Organization:** Sreenidhi Institute of Science and Technology (SNIST) with VetriaAI (August 22–23, 2026)
+   - **Achievement:** Top 2.3% nationally among 1,200+ participants. Built Life Admin AI (autonomous multi-app productivity agent using Model Context Protocol).
+3. **C-DAC BOSS OS Bug Bounty Challenge 2026**
+   - **Organization:** Centre for Development of Advanced Computing (C-DAC) (July 7–8, 2026)
+   - **Achievement:** PAN-India 36-hour security assessment of India's indigenous BOSS OS. Team submitted 11 findings across kernel, authentication, and package manager layers, all evaluated by the C-DAC jury.
+4. **MSME Idea Hackathon — Stage 2 Shortlist**
+   - **Organization:** Ministry of Micro, Small & Medium Enterprises, Govt. of India (August 2026)
+   - **Achievement:** Selected for national Stage 2 incubation evaluation among thousands of nationwide proposals.
+
+### Academic Credentials & Certifications
+- **B.Tech, Computer Science and Engineering** | 2023–2027 | Nalla Narasimha Reddy Education Society's Group of Institutions (NNRESGI), Hyderabad.
+- **Intermediate (Class 12, MPC Stream) — Grade A** | 2021–2023 | Deccan's New Chaitanya Junior College, Hyderabad.
+- **Secondary School Certificate (Class 10) — Grade O** | 2020–2021 | Shakuntala Grammar High School, Hyderabad.
+- **NPTEL Database Management Systems** | Jul–Sep 2025 | Elite + Silver · Ranked in Top 2% in India | IIT Kharagpur.
+- **NPTEL Programming in Java** | Jul–Oct 2026 | Elite + Silver · 88% | IIT Kharagpur.
+- **NPTEL Python for Data Science** | Jan–Feb 2026 | Elite + Silver · 75% | IIT Madras.

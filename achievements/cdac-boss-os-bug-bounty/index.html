@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-DAC BOSS OS Bug Bounty Challenge 2026 | Md Rounaq Ali</title>
+    <meta name="description" content="PAN-India 36-hr authorized OS security assessment of BOSS OS. Team Kernel Knights submitted 11 findings, all evaluated by the C-DAC jury.">
+    <meta name="author" content="Md Rounaq Ali">
+    <link rel="canonical" href="https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="C-DAC BOSS OS Bug Bounty Challenge 2026 | Security Assessment">
+    <meta property="og:description" content="Authorized security assessment of BOSS OS. Team Kernel Knights submitted 11 findings evaluated by the C-DAC jury.">
+    <meta property="og:url" content="https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/">
+    <meta property="og:image" content="https://md-rounaq-ali.netlify.app/assets/profile-avatar.png">
+
+    <!-- Favicon Suite -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#0a0e17">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "C-DAC BOSS OS Bug Bounty Challenge 2026",
+      "description": "PAN-India 36-hr authorized OS security assessment of BOSS OS. Team Kernel Knights submitted 11 vulnerability findings, all evaluated by C-DAC jury.",
+      "author": {
+        "@type": "Person",
+        "name": "Md Rounaq Ali",
+        "url": "https://md-rounaq-ali.netlify.app/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Md Rounaq Ali"
+      },
+      "datePublished": "2026-07-08",
+      "mainEntityOfPage": "https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://md-rounaq-ali.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Achievements", "item": "https://md-rounaq-ali.netlify.app/#achievements" },
+        { "@type": "ListItem", "position": 3, "name": "C-DAC BOSS OS Bug Bounty", "item": "https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/" }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #0f1626;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --card-border: rgba(108, 92, 231, 0.2);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-primary: #6c5ce7;
+            --accent-secondary: #00cec9;
+            --accent-gradient: linear-gradient(135deg, #6c5ce7, #00cec9);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .nav {
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 14, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav-logo span { color: var(--accent-secondary); }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+        }
+        .back-link:hover { color: #fff; transform: translateX(-3px); }
+        .main-container {
+            max-width: 860px;
+            margin: 40px auto 60px;
+            padding: 0 24px;
+            flex: 1;
+        }
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .article-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: var(--accent-gradient);
+        }
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .gold-pill { background: rgba(253, 203, 110, 0.15); color: #fdcb6e; border: 1px solid rgba(253, 203, 110, 0.35); }
+        .cyan-pill { background: rgba(0, 206, 201, 0.15); color: #00cec9; border: 1px solid rgba(0, 206, 201, 0.35); }
+        .shield-pill { background: rgba(225, 112, 85, 0.15); color: #ff7675; border: 1px solid rgba(225, 112, 85, 0.35); }
+        .purple-pill { background: rgba(108, 92, 231, 0.15); color: #a29bfe; border: 1px solid rgba(108, 92, 231, 0.35); }
+        h1.article-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #ffffff 40%, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .meta-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .meta-bar span { display: inline-flex; align-items: center; gap: 6px; }
+        .content-body h2 {
+            font-size: 1.35rem;
+            margin: 28px 0 12px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .content-body p {
+            color: var(--text-secondary);
+            font-size: 1.02rem;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .content-body strong { color: var(--text-primary); }
+        .highlight-box {
+            background: rgba(108, 92, 231, 0.08);
+            border-left: 3px solid var(--accent-primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-size: 0.96rem;
+            color: #cbd5e1;
+        }
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .tag {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer a { color: var(--accent-secondary); text-decoration: none; }
+</style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="nav-logo">&lt;<span>RA</span>/&gt;</a>
+        <a href="/#achievements" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    </nav>
+
+    <main class="main-container">
+        <article class="article-card">
+            <div class="badge-pill shield-pill"><i class="fas fa-shield-alt"></i> National Security Assessment &middot; C-DAC</div>
+            <h1 class="article-title">C-DAC BOSS OS Bug Bounty Challenge 2026</h1>
+            
+            <div class="meta-bar">
+                <span><i class="fas fa-shield-virus"></i> Centre for Development of Advanced Computing (C-DAC)</span>
+                <span><i class="far fa-calendar-alt"></i> July 7–8, 2026</span>
+                <span><i class="fas fa-users"></i> Team Kernel Knights</span>
+                <span><i class="fas fa-check-circle"></i> 11 Findings Submitted &amp; Evaluated</span>
+            </div>
+
+            <div class="content-body">
+                <h2>The Challenge</h2>
+                <p>
+                    The <strong>C-DAC BOSS OS Bug Bounty Challenge 2026</strong> was a nationwide 36-hour authorized security assessment organized by the <strong>Centre for Development of Advanced Computing (C-DAC)</strong>, a premier R&amp;D organization under the Ministry of Electronics and Information Technology (MeitY), Government of India.
+                </p>
+                <p>
+                    The challenge brought together ethical hackers, security analysts, and computer science researchers across India to audit and harden <strong>BOSS OS (Bharat Operating System Solutions)</strong>, India's sovereign Linux distribution developed for government and defense deployments.
+                </p>
+
+                <h2>Assessment Scope &amp; Methodology</h2>
+                <p>
+                    Operating inside an authorized assessment environment, our team systematically probed multiple operating system layers:
+                </p>
+                <div class="highlight-box">
+                    <strong>Focus Areas:</strong> Authentication mechanisms, package manager integrity checks, kernel module privileges, desktop environment service isolation, and local privilege escalation vectors.
+                </div>
+
+                <h2>Team Submissions &amp; Evaluation</h2>
+                <p>
+                    Across the 36-hour sprint, team <strong>Kernel Knights identified and submitted 11 detailed vulnerability findings</strong> complete with steps to reproduce and proof-of-concept exploits:
+                </p>
+                <p>
+                    &bull; <strong>11 of 11 Findings Formally Evaluated:</strong> Every submission was triaged and thoroughly reviewed by the official C-DAC jury.<br>
+                    &bull; <strong>Vulnerability Verification:</strong> Earned an accepted vulnerability verdict with a severity score of 6.30, providing actionable remediation guidance for the BOSS OS core development team.<br>
+                    &bull; <strong>Hands-on Threat Modeling:</strong> Deepened our team's expertise in Linux kernel security, process privilege auditing, and authorized vulnerability disclosure workflows.
+                </p>
+            </div>
+
+            <div class="tags-row">
+                <span class="tag">PAN-India 36-Hr Assessment</span>
+                <span class="tag">11 Findings Evaluated</span>
+                <span class="tag">BOSS OS Security</span>
+                <span class="tag">C-DAC Jury Verdict</span>
+                <span class="tag">Linux Kernel &amp; Auth</span>
+                <span class="tag">Vulnerability Assessment</span>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        &copy; 2026 Md Rounaq Ali. All rights reserved. <a href="/">Return to Home</a>
+    </footer>
+
+</body>
+</html>

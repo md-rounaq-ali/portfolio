@@ -20,4 +20,36 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Sitelink 1: 1st Prize, Web Development -->
+    <url>
+        <loc>https://md-rounaq-ali.netlify.app/achievements/hackathonz-2026-1st-prize/</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Sitelink 2: SNIST Hackathon 6th Rank -->
+    <url>
+        <loc>https://md-rounaq-ali.netlify.app/achievements/launchpadx-snist-6th-rank/</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Sitelink 3: C-DAC BOSS OS Bug Bounty -->
+    <url>
+        <loc>https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Sitelink 4: MSME Idea Hackathon -->
+    <url>
+        <loc>https://md-rounaq-ali.netlify.app/achievements/msme-idea-hackathon/</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
 </urlset>
