@@ -277,7 +277,7 @@
     <section class="section">
         <h2 class="section-title">Professional Summary</h2>
         <p style="font-size:8.3pt; color:#1e293b; line-height:1.38;">
-            Results-driven <strong>B.Tech Computer Science &amp; Engineering</strong> student at NNRESGI Hyderabad (graduating 2027) with proven expertise in <strong>Flutter, Python, Flask, Java, REST API integration,</strong> and <strong>OOP</strong>. Architected and deployed <strong>5+ production-grade applications</strong> across mobile, web, and AI platforms — with live demos and open-source code on GitHub. Earned 3 NPTEL Elite certifications including <strong>Top 2% in India</strong> (DBMS, IIT Kharagpur). Strong problem-solving, teamwork, and communication skills; experienced in debugging, testing, and CI/CD workflows. Actively seeking software development internships to contribute to impactful, collaborative engineering teams.
+            Results-driven <strong>B.Tech Computer Science &amp; Engineering</strong> student at NNRESGI Hyderabad (graduating 2027) with proven expertise in <strong>Flutter, Python, Flask, Java, REST API integration, LangChain RAG,</strong> and <strong>OOP</strong>. Architected and deployed <strong>5+ production-grade applications</strong> across mobile, web, and AI platforms — including a team-built AI insurance claims system reducing processing from 14 days to under 15 seconds. Earned 3 NPTEL Elite certifications including <strong>Top 2% in India</strong> (DBMS, IIT Kharagpur). Strong problem-solving, teamwork, and communication skills; experienced in debugging, testing, and CI/CD workflows. Actively seeking software development internships to contribute to impactful, collaborative engineering teams.
         </p>
     </section>
 
@@ -330,10 +330,13 @@
                 <span class="skill-cat">Programming Languages:</span> Python, Java, C, Dart, SQL, HTML5, CSS3, JavaScript
             </div>
             <div class="skills-row">
-                <span class="skill-cat">Mobile &amp; Web Frameworks:</span> Flutter (Android/iOS/Web), Flask, REST API Integration, Google ML Kit, Provider, Chart.js, Lottie
+                <span class="skill-cat">Mobile &amp; Web Frameworks:</span> Flutter (Android/iOS/Web), Flask, REST API Integration, Google ML Kit, LangChain, Provider, Chart.js, Lottie
             </div>
             <div class="skills-row">
-                <span class="skill-cat">Databases &amp; Tools:</span> MySQL, Git, GitHub, Android Studio, VS Code, Postman, Linux Shell, Netlify, Render
+                <span class="skill-cat">Databases &amp; Tools:</span> MySQL, SQLite, FAISS, sqlite-vec, Git, GitHub, Android Studio, VS Code, Postman, Linux Shell, Netlify, Render
+            </div>
+            <div class="skills-row">
+                <span class="skill-cat">AI &amp; ML:</span> Ollama (Llama 3.2, Llama 3.2-Vision), LangChain RAG, FAISS Vector Search, Tesseract OCR, NLP, Retrieval-Augmented Generation
             </div>
             <div class="skills-row">
                 <span class="skill-cat">Core CS &amp; Practices:</span> DSA, OOP, DBMS, OS, Information Security, Debugging, Unit Testing, CI/CD, Agile
@@ -390,18 +393,23 @@
             </ul>
         </div>
 
-        <!-- FinTrack -->
+        <!-- ClaimTrackr -->
         <div class="item">
             <div class="row-main">
-                <span class="title-bold">FinTrack — Full-Stack Personal Finance Tracker</span>
-                <span class="meta-right">Dec 2025 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/personal-finance-tracker" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a> &nbsp;|&nbsp; <a href="https://personal-finance-tracker-l1n2.onrender.com/login?next=%2F" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+                <span class="title-bold">ClaimTrackr — AI-Powered Automated Insurance Claims Processing System</span>
+                <span class="meta-right">Nov 2026 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/AI-Powered-Automated-Insurance-Claims-Processing-System" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a></span>
             </div>
             <div class="row-sub">
-                <span class="tech-tags">Python, Flask, MySQL, Chart.js, RESTful Architecture</span>
+                <span class="sub-italic">Team Project — Core AI &amp; Backend Developer (Team of 4)</span>
+            </div>
+            <div class="row-sub">
+                <span class="tech-tags">Python, Flask, Ollama (Llama 3.2-Vision), LangChain, FAISS, sqlite-vec, Tesseract OCR, TailwindCSS, SQLite</span>
             </div>
             <ul class="bullets">
-                <li>Improved monthly budget tracking efficiency by <strong>30%</strong> for users by developing <strong>6 interactive real-time financial visualization dashboards</strong> in Chart.js.</li>
-                <li>Engineered secure full-stack web application with session-based authentication supporting <strong>100+ concurrent requests</strong> and a <strong>12-table 3NF MySQL</strong> database.</li>
+                <li>Spearheaded the <strong>Policy RAG pipeline</strong> using LangChain, FAISS, and 768-dim embeddings with an SQLite context cache, eliminating model hallucinations across <strong>100% of adjudication test cases</strong>.</li>
+                <li>Architected a <strong>multi-factor fraud detection engine</strong> with sqlite-vec vector duplicate detection (&gt;70% similarity threshold) and semantic policy exclusion matching (&gt;75% similarity).</li>
+                <li>Co-engineered an <strong>SSE streaming API</strong> and structured JSON prompt rulebook, reducing claims processing time from <strong>3–14 days to under 15 seconds</strong> per claim.</li>
+                <li>Integrated a multimodal document ingestion pipeline combining <strong>PyPDF2 + Tesseract OCR + Llama 3.2-Vision</strong> fallback, achieving <strong>100% correct adjudication</strong> across 6 validation benchmarks.</li>
             </ul>
         </div>
     </section>
