@@ -1,76 +1,107 @@
-# 🌌 My portfolio website
+# 🌌 Mohammed Rounaq Ali — Software Developer Portfolio & Engineering Showcase
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-https%3A%2F%2Fmd--rounaq--ali.netlify.app-blueviolet?style=for-the-badge&logo=netlify&logoColor=white)](https://md-rounaq-ali.netlify.app/)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-https%3A%2F%2Fmd--rounaq--ali.netlify.app-6c5ce7?style=for-the-badge&logo=netlify&logoColor=white)](https://md-rounaq-ali.netlify.app/)
+[![Resume (PDF)](https://img.shields.io/badge/Resume-PDF%20%7C%20DOCX-00cec9?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://md-rounaq-ali.netlify.app/assets/resume.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 
-**A high-fidelity, secure, and responsive developer portfolio featuring a custom-engineered in-browser UNIX terminal emulator, rich semantic SEO markup, and GPU-optimized micro-interactions.**
+**A high-performance, responsive developer portfolio and multi-format ATS resume platform featuring a custom in-browser UNIX terminal emulator, rich semantic Schema.org JSON-LD structured data, dark glassmorphism architecture, and GPU-optimized micro-interactions.**
 
 </div>
 
 ---
 
 ## 📌 Table of Contents
-* [🚀 Live Deployment & Visuals](#-live-deployment--visuals)
+* [🚀 Live Deployment & Verification](#-live-deployment--verification)
 * [⚡ Core Engineering Feats](#-core-engineering-feats)
 * [💻 In-Browser Terminal Reference Sheet](#-in-browser-terminal-reference-sheet)
+* [🏆 Major Achievements & Honors](#-major-achievements--honors)
+* [📄 Multi-Format ATS Resume Architecture](#-multi-format-ats-resume-architecture)
 * [🛠️ Tech Stack & Clean Architecture](#️-tech-stack--clean-architecture)
 * [📂 File Directory Tree](#-file-directory-tree)
 * [🖥️ Local Installation & Development](#️-local-installation--development)
-* [💼 Recruiter Evaluation Quick-Links](#-recruiter-evaluation-quick-links)
+* [💼 Recruiter Evaluation & Contact](#-recruiter-evaluation--contact)
 
 ---
 
-## 🚀 Live Deployment & Visuals
+## 🚀 Live Deployment & Verification
 
-* **Live Interactive URL:** [https://md-rounaq-ali.netlify.app](https://md-rounaq-ali.netlify.app)
-* **Hosting Infrastructure:** Netlify Continuous Deployment (CD)
-* **Security Layer:** Automatically provisioned Let's Encrypt SSL/TLS Certificate (HTTPS)
-* **Google SEO Status:** Formally verified and crawled via Google Search Console HTML Meta verification.
+* **Live Interactive Portfolio:** [https://md-rounaq-ali.netlify.app](https://md-rounaq-ali.netlify.app)
+* **Hosting & CI/CD Pipeline:** Netlify Continuous Deployment (auto-deploys on `git push origin main`)
+* **Security & Encryption:** Automated Let's Encrypt SSL/TLS Certificate (HSTS enforced, HTTPS)
+* **Google Search Indexation:** Verified and crawled via Google Search Console HTML verification metadata with full WebSite and ProfilePage JSON-LD structured data schemas.
 
 ---
 
 ## ⚡ Core Engineering Feats
 
-This website is not just a static business card. It was designed to showcase high-performance front-end programming, layout performance, and clean codebase organization.
+This portfolio is built from scratch with zero framework bloat, prioritizing layout performance, accessible DOM semantics, and clean architectural organization.
 
-### 1. 💻 In-Browser Terminal Emulator (with Linux Bash History)
+### 1. 💻 In-Browser Terminal Emulator (with Linux Bash History Buffer)
 Instead of standard static bio descriptions, the portfolio hosts a fully functional browser command-line interface:
-* **Dynamic Keyboard Event Listener:** Intercepts `'ArrowUp'` and `'ArrowDown'` keystrokes using native Javascript event handlers.
+* **Dynamic Keyboard Event Listener:** Intercepts `ArrowUp` and `ArrowDown` keystrokes using native Javascript event listeners.
 * **History Memory Buffer:** Stores previously entered commands in an in-memory array list. Pressing up/down cycles through previous inputs exactly like a native Linux bash terminal shell.
 * **HTML Sanitization Security:** All CLI commands undergo character escaping filters before rendering in the DOM, preventing Cross-Site Scripting (XSS) input vulnerabilities.
 
-### 2. 📋 Recruiter Friction-Reduction Clipboard API
+### 2. 📄 Multi-Format ATS Resume Engine (HTML, 1-Page PDF & 1-Page DOCX)
+* **LaTeX Computer Modern Typography:** High-aesthetic serif resume built with Latin Modern typography, Harvard/Resume Worded academic layout, and 100% monochrome black styling.
+* **Dual Download Channels:** Features instant one-click downloads for both **1-Page Vector PDF** (`Mohammed_Rounaq_Ali_Resume.pdf`) and **1-Page Word DOCX** (`Mohammed_Rounaq_Ali_Resume.docx`) designed specifically for high ATS scanner compatibility (ResumeGo, Jobscan, Taleo, Workday).
+* **High ATS Metric Density:** Contains 13+ quantified achievements (>99% latency reduction, 100% benchmark accuracy, 60 FPS rendering, 40% load time reduction) and comprehensive soft skills integration (Agile/Scrum, Problem-Solving, Teamwork, Technical Communication, Leadership).
+
+### 3. 📋 Recruiter Friction-Reduction Clipboard API
 * Integrated one-click copy triggers into contact sections (Email and Phone).
 * Triggers hardware-accelerated SVG icon updates and spawns self-destructing floating "Copied!" tooltips, lowering friction for quick contact.
 
-### 3. 🤖 Invisible Rich-Snippet Structured SEO (JSON-LD)
-* Injected standard schema metadata objects inside the page `<head>` mapped to **Schema.org** structures.
+### 4. 🤖 Invisible Rich-Snippet Structured SEO (JSON-LD)
+* Injected standard schema metadata objects inside the page `<head>` mapped to **Schema.org** structures (`WebSite`, `ProfilePage`, `Person`).
 * Explicitly states academic degree parameters (B.Tech CSE), geographical location (Hyderabad, India), core developer competencies, and project references.
 * Drastically improves organic crawler parsing, indexation hierarchy, and Google search queries match-making.
 
-### 4. ⚙️ Hardware-Accelerated Tech Ticker & Parallax Controls
-* Designed a continuous, infinite-loop technical icon marquee. Powered exclusively by GPU-accelerated CSS `transform: translate3d` transitions to prevent browser repaint/reflow lag.
-* Embedded smooth perspective parallax listeners. Translates card layers relative to the viewport’s scroll boundaries for elegant UI depth.
+### 5. ⚙️ Hardware-Accelerated Tech Ticker & Parallax Controls
+* Designed a continuous, infinite-loop technical icon marquee powered exclusively by GPU-accelerated CSS `transform: translate3d` transitions to prevent browser repaint/reflow lag.
+* Embedded smooth perspective parallax listeners that translate card layers relative to the viewport’s scroll boundaries for elegant UI depth.
 
 ---
 
 ## 💻 In-Browser Terminal Reference Sheet
 
-Below is a map of the commands built directly into the CLI controller:
+Below is a reference of the commands built directly into the CLI controller:
 
 | Command | Action | Output Description |
 |:---|:---|:---|
-| `help` | Lists Options | Renders a custom list of all available commands |
+| `help` | Lists Options | Renders a custom list of all available interactive commands |
 | `about` | Prints Bio | Displays graduation year, academic institution, and developer specialties |
-| `skills` | Renders Stack | Generates a structured list of core languages, frameworks, and tools |
-| `projects` | Details Assets | Returns live links and tech stacks for *VoxCalc*, *Block Crush*, *FinTrack*, and *Weather Intel* |
-| `contact` | Prints Channels | Outlines instant direct channels (Email, WhatsApp, Location) |
+| `skills` | Renders Stack | Generates a structured list of core languages, frameworks, AI/ML, databases, and DevOps tools |
+| `projects` | Details Assets | Returns live links and tech stacks for *ClaimTrackr*, *NexBrief*, *VoxCalc*, *Block Crush*, *FinTrack*, and *Weather Intel* |
+| `achievements` | Displays Honors | Lists national hackathon victories, 1st prize awards, and C-DAC bug bounty assessment records |
+| `contact` | Prints Channels | Outlines instant direct communication channels (Email, WhatsApp, Location) |
 | `clear` | Clears Screen | Flushes DOM history inside the terminal card console |
+
+---
+
+## 🏆 Major Achievements & Honors
+
+1. **🏆 1st Prize, Web Development — HackathonZ 2026 (Hack2Hire)**  
+   *Malla Reddy University | July 17–18, 2026*  
+   Clinched 1st Prize at a national 24-hour hackathon with team Kernel Knights (5 members). Built **TruthLens AI**, an automated news transparency and narrative verification platform that aggregates multi-source coverage, extracts core facts, and detects media framing and bias using automated NLP pipelines.
+
+2. **🎖️ 6th of 260+ Teams — LaunchPadX 2026 (Top 2.3%)**  
+   *SNIST in collaboration with VetriaAI | August 22–23, 2026*  
+   Placed 6th out of 260+ teams and 1,200+ participants nationwide. Engineered **Life Admin AI**, an autonomous AI agent leveraging the Model Context Protocol (MCP) to execute multi-app actions across daily workflows (email inboxes, calendars, task managers) instead of passive chatbot recommendations.
+
+3. **🛡️ C-DAC BOSS OS Bug Bounty Challenge 2026**  
+   *Centre for Development of Advanced Computing (C-DAC) | July 7–8, 2026*  
+   Participated in a PAN-India 36-hour authorized OS security assessment of BOSS OS (Bharat Operating System Solutions). Submitted **11 vulnerability findings, all evaluated** by the C-DAC jury across authentication, package management, kernel, and desktop layers.
+
+4. **💡 MSME Idea Hackathon — Stage 2 National Shortlist**  
+   *Ministry of Micro, Small & Medium Enterprises, Govt. of India | August 2026*  
+   National innovation proposal selected for Stage 2 evaluation under the Ministry of MSME incubation grant scheme among thousands of nationwide student and startup applicants.
 
 ---
 
@@ -78,42 +109,52 @@ Below is a map of the commands built directly into the CLI controller:
 
 | Layer | Technology | Key Responsibility |
 |:---|:---|:---|
-| **Semantic Foundation** | HTML5 | Secure document layout, accessibility compliance, and SEO schemas |
-| **Design Frame** | CSS3 | Custom HSL design tokens, Glassmorphism cards, fluid grid layouts, and custom scrollbars |
-| **Logic & CLI Engine** | ES6+ JavaScript | Keyboard event bindings, history buffer array state, and clip copy helpers |
-| **API Integration** | Web3Forms & EmailJS | Automated back-end contact form submissions directly to primary inbox |
+| **Semantic Foundation** | HTML5 | Accessible document structure, Open Graph tags, and Schema.org JSON-LD metadata |
+| **Design Framework** | CSS3 (Modern Glassmorphism) | Custom CSS variables, responsive CSS Grid / Flexbox layouts, dark theme tokens, and keyframe animations |
+| **Logic & CLI Engine** | Modern ES6+ JavaScript | Keyboard event bindings, in-memory command history buffer, DOM manipulation, and clipboard copy triggers |
+| **Form Processing** | EmailJS API | Asynchronous serverless email dispatch directly to primary inbox with confetti visual triggers |
+| **Document Generation** | Python 3 + python-docx + Chromium | Automated 1-page A4 PDF and ATS-compliant DOCX resume compilation |
 
 ---
 
 ## 📂 File Directory Tree
 
-This project has been structured strictly to match production-grade engineering repository standards:
-
 ```text
 portfolio-website/
 ├── assets/
-│   ├── nexbrief-v2.jpg       # IT Newsletter Platform preview screen
-│   ├── block-crush.jpg       # Flutter Puzzle Game preview screen
-│   ├── fintrack.png          # Python Finance Tracker preview panel
-│   ├── weather-v2.jpg        # Flutter live API Weather preview panel
-│   ├── voxcalc.jpg           # Flutter AI Computational Suite preview panel
-│   ├── profile-avatar.png    # Professional profile representation
-│   ├── nptel-logo.png        # Verified NPTEL certification logo badge
-│   ├── favicon.svg           # Branded site favicon vector
-│   └── resume.html           # ATS-friendly responsive resume page
-├── index.html                # Main semantic framework & JSON-LD metadata
-├── style.css                 # HSL variables, core stylesheet, & animation keys
-├── script.js                 # Terminal shell, scroll controller, & feedback scripts
-└── README.md                 # Professional technical repository guide
+│   ├── claimtrackr.jpg                    # ClaimTrackr AI System project card banner
+│   ├── nexbrief-v2.jpg                    # NexBrief IT Newsletter Platform preview
+│   ├── voxcalc.jpg                        # VoxCalc AI Computational Suite preview
+│   ├── block-crush.jpg                    # Block Crush Flutter puzzle game preview
+│   ├── fintrack.png                       # FinTrack personal finance tracker preview
+│   ├── weather-v2.jpg                     # Weather Intel Flutter REST API preview
+│   ├── profile-avatar.png                 # Professional profile representation
+│   ├── nptel-logo.png                     # Verified NPTEL certification logo badge
+│   ├── Mohammed_Rounaq_Ali_Resume.pdf     # 1-Page A4 ATS-optimized PDF resume
+│   ├── Mohammed_Rounaq_Ali_Resume.docx    # 1-Page ATS-optimized Word DOCX resume
+│   ├── resume.html                        # LaTeX-styled responsive resume webpage
+│   ├── DATABASE_MANAGEMENT_SYSTEM-NPTEL.pdf # NPTEL Elite+Silver DBMS certificate
+│   ├── PROGRAMMING_IN_JAVA-NPTEL.pdf      # NPTEL Elite+Silver Java certificate
+│   ├── PYTHON_FOR_DATA_SCIENCE-NPTEL.pdf  # NPTEL Elite+Silver Python certificate
+│   └── favicon*                           # High-resolution favicon suite (16x16 to 512x512)
+├── index.html                             # Main single-page application & semantic layout
+├── style.css                              # Design tokens, glassmorphism, animations, & media queries
+├── script.js                              # Terminal shell, scroll controller, particles, & EmailJS
+├── manifest.json                          # PWA web manifest
+├── site.webmanifest                       # Progressive Web App configuration
+├── robots.txt                             # Search crawler instruction set
+├── sitemap.xml                            # Search engine XML sitemap index
+├── _headers                               # Netlify custom HTTP headers (CORS & caching)
+└── README.md                              # Professional repository documentation
 ```
 
 ---
 
 ## 🖥️ Local Installation & Development
 
-To clone, explore, and run this repository locally, execute the following commands in your shell terminal:
+To clone, explore, and run this repository locally:
 
-1. **Clone the repository locally:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/md-rounaq-ali/portfolio.git
    ```
@@ -123,17 +164,22 @@ To clone, explore, and run this repository locally, execute the following comman
    cd portfolio
    ```
 
-3. **Launch local previews:**
+3. **Launch local preview:**
    * Double-click `index.html` to run statically in any modern browser.
-   * **Professional Developer Setup:** Open the folder in VS Code, install the **Live Server** extension, and hit **Go Live** to launch on `http://127.0.0.1:5500`.
+   * **Recommended Developer Setup:** Open the folder in VS Code, install the **Live Server** extension, and click **Go Live** on port `5500`.
 
 ---
 
-## 💼 Recruiter Evaluation Quick-Links
+## 💼 Recruiter Evaluation & Contact
 
-* **Live Portfolio Link:** [https://md-rounaq-ali.netlify.app](https://md-rounaq-ali.netlify.app)
-* **Direct Professional Contact:** [LinkedIn Profile](https://www.linkedin.com/in/md-rounaq-ali/)
+* **Live Portfolio:** [https://md-rounaq-ali.netlify.app](https://md-rounaq-ali.netlify.app)
+* **Direct Resume (HTML):** [https://md-rounaq-ali.netlify.app/assets/resume.html](https://md-rounaq-ali.netlify.app/assets/resume.html)
+* **Direct PDF Resume:** [Mohammed_Rounaq_Ali_Resume.pdf](https://md-rounaq-ali.netlify.app/assets/Mohammed_Rounaq_Ali_Resume.pdf)
+* **Direct Word (.docx) Resume:** [Mohammed_Rounaq_Ali_Resume.docx](https://md-rounaq-ali.netlify.app/assets/Mohammed_Rounaq_Ali_Resume.docx)
+* **Email:** [tabrasali7@gmail.com](mailto:tabrasali7@gmail.com)
+* **LinkedIn:** [linkedin.com/in/md-rounaq-ali](https://www.linkedin.com/in/md-rounaq-ali/)
+* **GitHub:** [github.com/md-rounaq-ali](https://github.com/md-rounaq-ali)
 
 ---
 
-*Developed with passion, precision, and clean code. Clean architecture builds beautiful software.*
+*Architected and developed with precision, clean design, and high-performance software engineering standards.*
