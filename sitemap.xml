@@ -4,50 +4,50 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Main Portfolio Homepage -->
+    <!-- Main Developer Portfolio Homepage -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Resume Page -->
+    <!-- Interactive & ATS Resume Page -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/assets/resume.html</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Sitelink 1: 1st Prize, Web Development -->
+    <!-- Sitelink 1: 1st Prize, Web Development — HackathonZ 2026 -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/achievements/hackathonz-2026-1st-prize/</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Sitelink 2: SNIST Hackathon 6th Rank -->
+    <!-- Sitelink 2: SNIST Hackathon 6th Rank — LaunchPadX 2026 -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/achievements/launchpadx-snist-6th-rank/</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Sitelink 3: C-DAC BOSS OS Bug Bounty -->
+    <!-- Sitelink 3: C-DAC BOSS OS Bug Bounty Challenge 2026 -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/achievements/cdac-boss-os-bug-bounty/</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Sitelink 4: MSME Idea Hackathon -->
+    <!-- Sitelink 4: MSME Idea Hackathon — Stage 2 Shortlist -->
     <url>
         <loc>https://md-rounaq-ali.netlify.app/achievements/msme-idea-hackathon/</loc>
-        <lastmod>2026-11-20</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>

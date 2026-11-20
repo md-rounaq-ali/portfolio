@@ -1,5 +1,15 @@
+# Robots.txt for md-rounaq-ali.netlify.app
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Dedicated Googlebot Rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /
+
+# XML Sitemap Directive
 Sitemap: https://md-rounaq-ali.netlify.app/sitemap.xml
+Host: https://md-rounaq-ali.netlify.app
