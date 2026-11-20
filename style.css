@@ -1257,3 +1257,168 @@ body.light-mode .cursor-glow { opacity: 0.5; }
         font-size: 0.8rem;
     }
 }
+
+
+/* ==================== Achievements Section ==================== */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.achievement-card {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(108, 92, 231, 0.15);
+}
+
+.achievement-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transition: var(--transition);
+    transform-origin: left;
+}
+
+.achievement-card:hover::after {
+    transform: scaleX(1);
+}
+
+.achievement-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.achievement-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.achievement-icon.gold {
+    background: rgba(253, 203, 110, 0.15);
+    color: #fdcb6e;
+    border: 1px solid rgba(253, 203, 110, 0.3);
+}
+
+.achievement-icon.cyan {
+    background: rgba(0, 206, 201, 0.15);
+    color: #00cec9;
+    border: 1px solid rgba(0, 206, 201, 0.3);
+}
+
+.achievement-icon.shield-icon {
+    background: rgba(225, 112, 85, 0.15);
+    color: #e17055;
+    border: 1px solid rgba(225, 112, 85, 0.3);
+}
+
+.achievement-icon.purple {
+    background: rgba(108, 92, 231, 0.15);
+    color: #a29bfe;
+    border: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.achievement-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+}
+
+.gold-pill {
+    background: rgba(253, 203, 110, 0.12);
+    color: #fdcb6e;
+    border: 1px solid rgba(253, 203, 110, 0.25);
+}
+
+.cyan-pill {
+    background: rgba(0, 206, 201, 0.12);
+    color: #00cec9;
+    border: 1px solid rgba(0, 206, 201, 0.25);
+}
+
+.shield-pill {
+    background: rgba(225, 112, 85, 0.12);
+    color: #ff7675;
+    border: 1px solid rgba(225, 112, 85, 0.25);
+}
+
+.purple-pill {
+    background: rgba(108, 92, 231, 0.12);
+    color: #a29bfe;
+    border: 1px solid rgba(108, 92, 231, 0.25);
+}
+
+.achievement-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.achievement-sub {
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.achievement-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.achievement-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.achievement-desc strong {
+    color: var(--text-primary);
+}
+
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.achievement-tags span {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}

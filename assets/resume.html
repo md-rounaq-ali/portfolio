@@ -4,54 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Rounaq Ali — Resume</title>
-    <meta name="description" content="Mohammed Rounaq Ali — B.Tech CSE student (2027) at NNRESGI Hyderabad. Software Developer skilled in Flutter, Python, Java, and REST APIs. View professional resume, key projects, and NPTEL certifications.">
+    <meta name="description" content="Resume of Mohammed Rounaq Ali — B.Tech Computer Science student at NNRESGI Hyderabad (2027). Software Developer skilled in Python, Flutter, Java, LangChain, RAG, and REST APIs.">
     <meta name="author" content="Mohammed Rounaq Ali">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://md-rounaq-ali.netlify.app/assets/resume.html">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Mohammed Rounaq Ali — Resume">
-    <meta property="og:description" content="Software Developer skilled in Flutter, Python, Java, and REST APIs. B.Tech CSE Student (2027), NNRESGI Hyderabad.">
+    <meta property="og:description" content="Software Developer skilled in Python, Flutter, Java, LangChain RAG, REST APIs, and Mobile/Web architecture.">
     <meta property="og:url" content="https://md-rounaq-ali.netlify.app/assets/resume.html">
-    <meta property="og:image" content="https://md-rounaq-ali.netlify.app/assets/favicon-512x512.png">
+    <meta property="og:image" content="https://md-rounaq-ali.netlify.app/assets/og-image.png">
 
-    <!-- Favicon & Search Engine Brand Icons (Google Search Compliant) -->
+    <!-- Favicon Suite -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#6c5ce7">
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- JSON-LD Structured Data: ProfilePage -->
+    <!-- Latin Modern Web Font for authentic LaTeX typography -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latin-modern-web@1.0.0/style/latin-modern.css">
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfilePage",
-      "name": "Mohammed Rounaq Ali — Resume",
-      "url": "https://md-rounaq-ali.netlify.app/assets/resume.html",
       "mainEntity": {
         "@type": "Person",
         "name": "Mohammed Rounaq Ali",
+        "alternateName": "Md Rounaq Ali",
         "jobTitle": "Software Developer",
-        "image": "https://md-rounaq-ali.netlify.app/assets/favicon-192x192.png",
+        "url": "https://md-rounaq-ali.netlify.app/",
+        "image": "https://md-rounaq-ali.netlify.app/assets/profile.jpg",
+        "email": "mailto:tabrasali7@gmail.com",
+        "telephone": "+919030059421",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Nalla Narasimha Reddy Education Society's Group of Institutions"
+        },
         "sameAs": [
           "https://github.com/md-rounaq-ali",
-          "https://linkedin.com/in/md-rounaq-ali",
-          "https://md-rounaq-ali.netlify.app/"
+          "https://linkedin.com/in/md-rounaq-ali"
         ]
       }
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         /* ===== Reset & Base ===== */
         *, *::before, *::after {
@@ -59,198 +70,173 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #eef2f6;
-            color: #111827;
-            font-size: 8.6pt;
-            line-height: 1.3;
+            font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', Times, 'Nimbus Roman No9 L', serif;
+            background: #f1f5f9;
+            color: #000000;
+            font-size: 8.4pt;
+            line-height: 1.24;
             -webkit-font-smoothing: antialiased;
         }
 
         /* ===== Download Button ===== */
         .print-btn {
             position: fixed;
-            top: 16px; right: 20px;
+            top: 14px; right: 18px;
             z-index: 1000;
-            background: #111827;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 12px;
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            padding: 7px 15px;
+            border-radius: 4px;
+            font-size: 11px;
             font-weight: 600;
             font-family: inherit;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
             display: inline-flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
             transition: all 0.2s;
         }
-        .print-btn:hover { background: #1f2937; transform: translateY(-1px); }
+        .print-btn:hover { background: #333333; }
 
         /* ===== A4 Page ===== */
         .page {
             width: 210mm;
             min-height: 297mm;
-            margin: 24px auto;
-            background: #fff;
-            padding: 8.5mm 13mm 8mm 13mm;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            margin: 16px auto;
+            background: #ffffff;
+            padding: 7.5mm 12mm 6.5mm 12mm;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            color: #000000;
         }
 
         /* ===== Header ===== */
-        .header { text-align: center; margin-bottom: 6px; }
+        .header { text-align: center; margin-bottom: 4px; }
         .name {
-            font-size: 18pt;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #0f172a;
+            font-size: 17pt;
+            font-weight: bold;
             text-transform: uppercase;
-            line-height: 1;
-            margin-bottom: 3px;
+            letter-spacing: 0.5px;
+            color: #000000;
+            margin-bottom: 2px;
         }
         .contact-row {
-            font-size: 8pt;
-            color: #334155;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2px 5px;
+            font-size: 8.2pt;
+            color: #000000;
+            line-height: 1.35;
         }
-        .contact-row a { color: #0f172a; text-decoration: none; font-weight: 500; }
-        .contact-row a:hover { text-decoration: underline; }
-        .sep { color: #94a3b8; }
+        .contact-row a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        .sep { margin: 0 3px; color: #000000; }
 
         /* ===== Sections ===== */
-        .section { margin-bottom: 5.5px; }
+        .section { margin-bottom: 4px; }
         .section-title {
-            font-size: 9pt;
-            font-weight: 800;
+            font-size: 9.2pt;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #0f172a;
-            border-bottom: 1.2px solid #0f172a;
+            letter-spacing: 0.5px;
+            color: #000000;
+            border-bottom: 1px solid #000000;
             padding-bottom: 1px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         /* ===== Items ===== */
-        .item { margin-bottom: 3.5px; }
+        .item { margin-bottom: 2.5px; }
         .item:last-child { margin-bottom: 0; }
 
         .row-main {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 8.7pt;
+            font-size: 8.5pt;
         }
-        .title-bold { font-weight: 700; color: #0f172a; }
+        .title-bold { font-weight: bold; color: #000000; }
         .meta-right {
-            font-weight: 600;
-            font-size: 8.2pt;
-            color: #334155;
+            font-size: 8.1pt;
+            color: #000000;
             white-space: nowrap;
             text-align: right;
             margin-left: 6px;
         }
+        .meta-right a { color: #000000; text-decoration: underline; }
         .row-sub {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 8.2pt;
+            font-size: 8.1pt;
             margin-top: 0.5px;
-            color: #334155;
+            color: #000000;
         }
-        .sub-italic { font-style: italic; color: #334155; }
-        .sub-italic strong { font-style: normal; font-weight: 600; color: #0f172a; }
-        .tech-tags { font-weight: 500; color: #475569; font-size: 7.9pt; }
+        .sub-italic { font-style: italic; color: #000000; }
+        .tech-tags { font-size: 7.9pt; color: #000000; }
 
         /* ===== Bullets ===== */
         ul.bullets {
             list-style-type: disc;
-            margin-left: 13px;
-            margin-top: 1px;
+            margin-left: 14px;
+            margin-top: 0.5px;
         }
         ul.bullets li {
-            font-size: 8.2pt;
-            color: #1e293b;
-            line-height: 1.28;
+            font-size: 8.05pt;
+            color: #000000;
+            line-height: 1.22;
             margin-bottom: 1px;
-            padding-left: 1px;
         }
         ul.bullets li:last-child { margin-bottom: 0; }
-        ul.bullets li strong { font-weight: 600; color: #0f172a; }
+        strong { font-weight: bold; color: #000000; }
 
         /* ===== Skills ===== */
-        .skills-list { font-size: 8.2pt; line-height: 1.35; color: #1e293b; }
-        .skills-row { margin-bottom: 1.2px; }
-        .skills-row:last-child { margin-bottom: 0; }
-        .skill-cat { font-weight: 700; color: #0f172a; }
+        .skills-list { display: flex; flex-direction: column; gap: 1px; }
+        .skills-row { font-size: 8.05pt; color: #000000; line-height: 1.23; }
+        .skill-cat { font-weight: bold; color: #000000; }
 
-        /* ===== Certifications ===== */
-        .cert-item {
-            font-size: 8.2pt;
-            line-height: 1.28;
-            margin-bottom: 1.8px;
-            color: #1e293b;
+        /* ===== Achievements & Certs ===== */
+        .bullet-item {
+            font-size: 8.05pt;
+            color: #000000;
+            line-height: 1.22;
+            margin-bottom: 1.5px;
+            padding-left: 14px;
+            text-indent: -14px;
         }
-        .cert-item:last-child { margin-bottom: 0; }
-        .cert-item strong { font-weight: 700; color: #0f172a; }
-        .cert-badge { font-weight: 600; color: #047857; font-size: 7.8pt; }
-        .cert-meta { color: #475569; font-size: 7.8pt; }
-        .cert-view-link {
-            color: #0f172a;
-            font-weight: 600;
-            font-size: 7.8pt;
-            text-decoration: underline;
-            margin-left: 3px;
-            white-space: nowrap;
-        }
-        .cert-view-link:hover { color: #4f46e5; }
+        .bullet-item:last-child { margin-bottom: 0; }
+        .bullet-item a { color: #000000; text-decoration: underline; }
 
-        /* ===== Print ===== */
-        @page { size: A4; margin: 8mm 12mm; }
+        /* ===== Print Styles ===== */
+        @page {
+            size: A4 portrait;
+            margin: 6mm 10mm 6mm 10mm;
+        }
 
         @media print {
-            html, body {
-                background: #fff !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                font-size: 8.5pt !important;
-                color: #000 !important;
-            }
+            body { background: #fff; font-size: 8.2pt; }
             .print-btn { display: none !important; }
             .page {
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-                min-height: auto !important;
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
             }
-            a { color: #000 !important; text-decoration: none !important; }
-            .section-title { border-bottom: 1.2px solid #000 !important; color: #000 !important; }
-            .title-bold, .name, .skill-cat, ul.bullets li strong, .cert-item strong { color: #000 !important; }
-            .cert-badge { color: #000 !important; font-weight: 700 !important; }
-        }
-
-        @media (max-width: 800px) {
-            body { background: #fff; }
-            .page { width: 100%; margin: 0; padding: 16px; box-shadow: none; }
-            .print-btn { top: 10px; right: 10px; padding: 6px 12px; font-size: 11px; }
+            a { color: #000000 !important; text-decoration: underline !important; }
+            .section { page-break-inside: avoid; }
         }
     </style>
 </head>
 <body>
 
 <button class="print-btn" onclick="window.print()">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
     </svg>
-    Download PDF
+    <span>Print / Download PDF</span>
 </button>
 
 <div class="page">
@@ -260,15 +246,15 @@
         <h1 class="name">Mohammed Rounaq Ali</h1>
         <div class="contact-row">
             <span>Hyderabad, India</span>
-            <span class="sep">•</span>
+            <span class="sep">|</span>
             <span>+91 9030059421</span>
-            <span class="sep">•</span>
+            <span class="sep">|</span>
             <a href="mailto:tabrasali7@gmail.com">tabrasali7@gmail.com</a>
-            <span class="sep">•</span>
+            <span class="sep">|</span>
             <a href="https://linkedin.com/in/md-rounaq-ali" target="_blank" rel="noopener">linkedin.com/in/md-rounaq-ali</a>
-            <span class="sep">•</span>
+            <span class="sep">|</span>
             <a href="https://github.com/md-rounaq-ali" target="_blank" rel="noopener">github.com/md-rounaq-ali</a>
-            <span class="sep">•</span>
+            <span class="sep">|</span>
             <a href="https://md-rounaq-ali.netlify.app/" target="_blank" rel="noopener">md-rounaq-ali.netlify.app</a>
         </div>
     </header>
@@ -276,50 +262,9 @@
     <!-- ==================== PROFESSIONAL SUMMARY ==================== -->
     <section class="section">
         <h2 class="section-title">Professional Summary</h2>
-        <p style="font-size:8.3pt; color:#1e293b; line-height:1.38;">
-            Results-driven <strong>B.Tech Computer Science &amp; Engineering</strong> student at NNRESGI Hyderabad (graduating 2027) with proven expertise in <strong>Flutter, Python, Flask, Java, REST API integration, LangChain RAG,</strong> and <strong>OOP</strong>. Architected and deployed <strong>5+ production-grade applications</strong> across mobile, web, and AI platforms — including a team-built AI insurance claims system reducing processing from 14 days to under 15 seconds. Earned 3 NPTEL Elite certifications including <strong>Top 2% in India</strong> (DBMS, IIT Kharagpur). Strong problem-solving, teamwork, and communication skills; experienced in debugging, testing, and CI/CD workflows. Actively seeking software development internships to contribute to impactful, collaborative engineering teams.
+        <p style="font-size:8.05pt; color:#000000; line-height:1.24;">
+            Results-driven <strong>B.Tech Computer Science &amp; Engineering</strong> student at NNRESGI Hyderabad (graduating 2027) with expertise in <strong>Flutter, Python, Flask, Java, LangChain RAG, REST APIs,</strong> and <strong>OOP</strong>. Architected and deployed <strong>5+ production applications</strong> across mobile, web, and AI platforms — including a team-built AI insurance claims system reducing adjudication latency from 14 days to under 15 seconds. Earned 3 NPTEL Elite certifications including <strong>Top 2% in India</strong> (DBMS, IIT Kharagpur). 1st prize hackathon winner (HackathonZ 2026), 6th of 260+ teams at LaunchPadX 2026, and contributor to PAN-India C-DAC BOSS OS security assessment. Seeking software development roles to contribute to high-impact engineering teams.
         </p>
-    </section>
-
-    <!-- ==================== EDUCATION ==================== -->
-    <section class="section">
-        <h2 class="section-title">Education</h2>
-
-        <div class="item">
-            <div class="row-main">
-                <span class="title-bold">Nalla Narasimha Reddy Education Society's Group of Institutions (NNRESGI)</span>
-                <span class="meta-right">Aug 2023 – Jun 2027</span>
-            </div>
-            <div class="row-sub">
-                <span class="sub-italic">Bachelor of Technology — Computer Science &amp; Engineering</span>
-                <span class="meta-right">Hyderabad, India</span>
-            </div>
-            <div class="row-sub">
-                <span class="tech-tags">Coursework: Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, DevOps Fundamentals</span>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="row-main">
-                <span class="title-bold">Deccan's New Chaitanya Junior College</span>
-                <span class="meta-right">Jul 2021 – May 2023</span>
-            </div>
-            <div class="row-sub">
-                <span class="sub-italic">Intermediate (Class 12) — MPC Stream &nbsp;|&nbsp; <strong>Achieved Grade A</strong></span>
-                <span class="meta-right">Hyderabad, India</span>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="row-main">
-                <span class="title-bold">Shakuntala Grammar High School</span>
-                <span class="meta-right">Jun 2020 – Mar 2021</span>
-            </div>
-            <div class="row-sub">
-                <span class="sub-italic">Secondary School Certificate (Class 10) — Mathematics &amp; Science &nbsp;|&nbsp; <strong>Achieved Grade O</strong></span>
-                <span class="meta-right">Hyderabad, India</span>
-            </div>
-        </div>
     </section>
 
     <!-- ==================== TECHNICAL SKILLS ==================== -->
@@ -330,16 +275,16 @@
                 <span class="skill-cat">Programming Languages:</span> Python, Java, C, Dart, SQL, HTML5, CSS3, JavaScript
             </div>
             <div class="skills-row">
-                <span class="skill-cat">Mobile &amp; Web Frameworks:</span> Flutter (Android/iOS/Web), Flask, REST API Integration, Google ML Kit, LangChain, Provider, Chart.js, Lottie
+                <span class="skill-cat">Frameworks &amp; Libraries:</span> Flutter (Android/iOS/Web), Flask, LangChain, REST APIs, Google ML Kit, Provider, TailwindCSS, Lottie
             </div>
             <div class="skills-row">
-                <span class="skill-cat">Databases &amp; Tools:</span> MySQL, SQLite, FAISS, sqlite-vec, Git, GitHub, Android Studio, VS Code, Postman, Linux Shell, Netlify, Render
+                <span class="skill-cat">AI &amp; Machine Learning:</span> Ollama (Llama 3.2, Llama 3.2-Vision), LangChain RAG, FAISS Vector Search, Tesseract OCR, NLP, Context Caching
             </div>
             <div class="skills-row">
-                <span class="skill-cat">AI &amp; ML:</span> Ollama (Llama 3.2, Llama 3.2-Vision), LangChain RAG, FAISS Vector Search, Tesseract OCR, NLP, Retrieval-Augmented Generation
+                <span class="skill-cat">Databases &amp; Tools:</span> MySQL, SQLite, sqlite-vec, Git, GitHub, Render, Netlify, VS Code, Android Studio, Postman, Linux Shell
             </div>
             <div class="skills-row">
-                <span class="skill-cat">Core CS &amp; Practices:</span> DSA, OOP, DBMS, OS, Information Security, Debugging, Unit Testing, CI/CD, Agile
+                <span class="skill-cat">Core CS &amp; Practices:</span> Data Structures &amp; Algorithms, OOP, DBMS, OS, Network Security, Debugging, Unit Testing, CI/CD, Agile
             </div>
         </div>
     </section>
@@ -348,23 +293,23 @@
     <section class="section">
         <h2 class="section-title">Technical Projects &amp; Software Development</h2>
 
-        <!-- ClaimTrackr — FEATURED TEAM PROJECT -->
+        <!-- ClaimTrackr -->
         <div class="item">
             <div class="row-main">
                 <span class="title-bold">ClaimTrackr — AI-Powered Automated Insurance Claims Processing System</span>
-                <span class="meta-right">Nov 2026 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/AI-Powered-Automated-Insurance-Claims-Processing-System" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a></span>
+                <span class="meta-right">Nov 2026 | <a href="https://github.com/md-rounaq-ali/AI-Powered-Automated-Insurance-Claims-Processing-System" target="_blank" rel="noopener">GitHub</a></span>
             </div>
             <div class="row-sub">
                 <span class="sub-italic">Team Project — Core AI &amp; Backend Developer (Team of 4)</span>
             </div>
             <div class="row-sub">
-                <span class="tech-tags">Python, Flask, Ollama (Llama 3.2-Vision), LangChain, FAISS, sqlite-vec, Tesseract OCR, TailwindCSS, SQLite</span>
+                <span class="tech-tags">Tech: Python, Flask, Ollama (Llama 3.2-Vision), LangChain, FAISS, sqlite-vec, Tesseract OCR, TailwindCSS, SQLite</span>
             </div>
             <ul class="bullets">
-                <li>Spearheaded the <strong>Policy RAG pipeline</strong> using LangChain, FAISS, and 768-dim embeddings with an SQLite context cache, eliminating model hallucinations across <strong>100% of adjudication test cases</strong>.</li>
-                <li>Architected a <strong>multi-factor fraud detection engine</strong> with sqlite-vec vector duplicate detection (&gt;70% similarity threshold) and semantic policy exclusion matching (&gt;75% similarity), preventing duplicate and fraudulent claims at ingestion.</li>
-                <li>Co-engineered an <strong>SSE streaming API</strong> and structured JSON prompt rulebook, cutting end-to-end claims adjudication time from <strong>3–14 days to under 15 seconds</strong>, a &gt;99% latency reduction.</li>
-                <li>Integrated a multimodal document ingestion pipeline combining <strong>PyPDF2 + Tesseract OCR + Llama 3.2-Vision</strong> fallback, achieving <strong>100% correct adjudication</strong> across all 6 standardized benchmark test cases.</li>
+                <li>Spearheaded <strong>Policy RAG pipeline</strong> using LangChain, FAISS, and 768-dim embeddings with SQLite context cache, eliminating hallucinations across <strong>100% of adjudication test cases</strong>.</li>
+                <li>Architected <strong>multi-factor fraud detection engine</strong> using sqlite-vec vector duplicate detection (&gt;70% similarity) and semantic exclusion matching (&gt;75% similarity), preventing fraudulent claims at ingestion.</li>
+                <li>Co-engineered <strong>SSE streaming API</strong> and structured JSON prompt rulebook, cutting end-to-end adjudication time from <strong>3–14 days to under 15 seconds</strong> (&gt;99% latency reduction).</li>
+                <li>Integrated multimodal document ingestion pipeline (<strong>PyPDF2 + Tesseract OCR + Llama 3.2-Vision</strong> fallback), achieving <strong>100% correct adjudication</strong> across 6 standardized validation benchmarks.</li>
             </ul>
         </div>
 
@@ -372,14 +317,14 @@
         <div class="item">
             <div class="row-main">
                 <span class="title-bold">NexBrief — Dedicated IT Intelligence Newsletter Platform</span>
-                <span class="meta-right">Jun 2026 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/nexbrief-daily-it-intelligence-platform" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a> &nbsp;|&nbsp; <a href="https://nexbrief-news.onrender.com/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+                <span class="meta-right">Jun 2026 | <a href="https://github.com/md-rounaq-ali/nexbrief-daily-it-intelligence-platform" target="_blank" rel="noopener">GitHub</a> | <a href="https://nexbrief-news.onrender.com/" target="_blank" rel="noopener">Live Demo</a></span>
             </div>
             <div class="row-sub">
-                <span class="tech-tags">Python, Flask, RESTful APIs, AI Content Curation, Automated Scheduling, Render</span>
+                <span class="tech-tags">Tech: Python, Flask, RESTful APIs, AI Content Curation, Automated Scheduling, Render</span>
             </div>
             <ul class="bullets">
-                <li>Scaled platform to <strong>100+ active subscribers</strong> with <strong>99.9% uptime</strong> by architecting a fully automated content aggregation pipeline processing <strong>50+ articles daily</strong> across 8 technical domains.</li>
-                <li>Engineered debounced caching and batched fetch pipelines, reducing average page load time by <strong>40%</strong> and cutting redundant API calls by <strong>60%</strong>, improving session engagement by <strong>25%</strong>.</li>
+                <li>Scaled platform to <strong>100+ active subscribers</strong> with <strong>99.9% uptime</strong> by architecting automated aggregation pipeline processing <strong>50+ articles daily</strong> across 8 technical domains.</li>
+                <li>Engineered debounced caching and batched fetch pipelines, reducing average page load time by <strong>40%</strong> and cutting redundant API calls by <strong>60%</strong>.</li>
             </ul>
         </div>
 
@@ -387,14 +332,14 @@
         <div class="item">
             <div class="row-main">
                 <span class="title-bold">VoxCalc — AI-Powered Cross-Platform Computation Suite</span>
-                <span class="meta-right">May 2026 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/VoxCalc" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a> &nbsp;|&nbsp; <a href="https://md-rounaq-ali.github.io/VoxCalc/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+                <span class="meta-right">May 2026 | <a href="https://github.com/md-rounaq-ali/VoxCalc" target="_blank" rel="noopener">GitHub</a> | <a href="https://md-rounaq-ali.github.io/VoxCalc/" target="_blank" rel="noopener">Live Demo</a></span>
             </div>
             <div class="row-sub">
-                <span class="tech-tags">Flutter, Dart, Google ML Kit OCR, Voice NLP, Custom Canvas, REST API Integration</span>
+                <span class="tech-tags">Tech: Flutter, Dart, Google ML Kit OCR, Voice NLP, Custom Canvas, REST API Integration</span>
             </div>
             <ul class="bullets">
-                <li>Achieved <strong>95% recognition accuracy</strong> on handwritten and printed mathematical expressions by integrating <strong>Google ML Kit OCR</strong> pipeline with custom voice NLP input parsing and equation normalization.</li>
-                <li>Maintained a steady <strong>60 FPS rendering rate</strong> across <strong>50+ mathematical equation types</strong> with zero UI thread blocking on Android, iOS, and Web via custom Canvas rendering engine.</li>
+                <li>Achieved <strong>95% recognition accuracy</strong> on handwritten and printed expressions by integrating <strong>Google ML Kit OCR</strong> pipeline with custom voice NLP input parsing and equation normalization.</li>
+                <li>Maintained consistent <strong>60 FPS rendering rate</strong> across <strong>50+ mathematical equation types</strong> with zero UI thread latency on Android, iOS, and Web via custom Canvas rendering engine.</li>
             </ul>
         </div>
 
@@ -402,14 +347,14 @@
         <div class="item">
             <div class="row-main">
                 <span class="title-bold">Block Crush — High-Performance Mobile Puzzle Game</span>
-                <span class="meta-right">Mar 2026 &nbsp;|&nbsp; <a href="https://github.com/md-rounaq-ali/block-crush-game" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">GitHub</a> &nbsp;|&nbsp; <a href="https://md-rounaq-ali.github.io/block-crush-game/" target="_blank" rel="noopener" style="color:#0f172a;text-decoration:underline;">Live Demo</a></span>
+                <span class="meta-right">Mar 2026 | <a href="https://github.com/md-rounaq-ali/block-crush-game" target="_blank" rel="noopener">GitHub</a> | <a href="https://md-rounaq-ali.github.io/block-crush-game/" target="_blank" rel="noopener">Live Demo</a></span>
             </div>
             <div class="row-sub">
-                <span class="tech-tags">Flutter, Dart, RepaintBoundary Optimization, Provider State Management, Lottie</span>
+                <span class="tech-tags">Tech: Flutter, Dart, RepaintBoundary Optimization, Provider State Management, Lottie</span>
             </div>
             <ul class="bullets">
-                <li>Reduced frame drops by <strong>80%</strong> and sustained consistent <strong>60 FPS performance</strong> on low-end <strong>2GB RAM</strong> Android devices by implementing RepaintBoundary widget-tree isolation and GPU layer caching.</li>
-                <li>Increased average user session duration by <strong>25%</strong> and reduced re-render overhead by <strong>35%</strong> using Provider reactive state management with Lottie micro-interaction animations.</li>
+                <li>Reduced frame drops by <strong>80%</strong> and sustained <strong>60 FPS performance</strong> on low-end <strong>2GB RAM</strong> devices via RepaintBoundary widget isolation and GPU layer caching.</li>
+                <li>Increased average user session duration by <strong>25%</strong> and decreased re-render overhead by <strong>35%</strong> using Provider reactive state management and Lottie micro-interactions.</li>
             </ul>
         </div>
     </section>
@@ -420,42 +365,79 @@
         <div class="item">
             <div class="row-main">
                 <span class="title-bold">Cyber Security Student Enrichment Program</span>
-                <span class="meta-right">Jan 2026 &nbsp;|&nbsp; Hyderabad, India</span>
+                <span class="meta-right">Jan 2026 | Hyderabad, India</span>
             </div>
             <div class="row-sub">
                 <span class="sub-italic">Hackers Gurukul — Information Security &amp; Vulnerability Assessment</span>
             </div>
             <ul class="bullets">
-                <li>Completed <strong>10+ hands-on security laboratories</strong> analyzing network vulnerability vectors, packet tracing, and OWASP Top 10 guidelines across a 4-week program.</li>
-                <li>Neutralized <strong>10+ simulated cyber threats</strong> with a <strong>100% resolution rate</strong> in timed team defense simulations.</li>
+                <li>Completed <strong>10+ hands-on security labs</strong> analyzing network vulnerability vectors, packet tracing, and OWASP Top 10 guidelines; neutralized <strong>10+ simulated cyber threats</strong> with 100% resolution rate in timed defense simulations.</li>
             </ul>
         </div>
     </section>
 
-    <!-- ==================== CERTIFICATIONS & ACHIEVEMENTS ==================== -->
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="section">
+        <h2 class="section-title">Achievements</h2>
+
+        <div class="bullet-item">
+            • <strong>1st Prize, Web Development – HackathonZ 2026 (Hack2Hire), Malla Reddy University</strong> (Jul 17–18, 2026) – National 24-hr hackathon; <strong>1st in category</strong> with team Kernel Knights (5 members); built <strong>TruthLens AI</strong>, an AI-powered news transparency platform comparing coverage across publishers and detecting bias.
+        </div>
+
+        <div class="bullet-item">
+            • <strong>6th of 260+ teams – LaunchPadX 2026, SNIST</strong> (Aug 22–23, 2026) – National innovation hackathon, <strong>1,200+ participants</strong>, with VetriaAI; team Kernel Knights (5); built <strong>Life Admin AI</strong>, an AI agent that takes context from multiple daily apps via MCPs and performs actions instead of just recommendations.
+        </div>
+
+        <div class="bullet-item">
+            • <strong>C-DAC BOSS OS Bug Bounty Challenge 2026</strong> (Jul 7–8, 2026) – PAN-India 36-hr authorized OS security assessment of BOSS OS; team submitted <strong>11 findings, all evaluated</strong> by C-DAC jury.
+        </div>
+
+        <div class="bullet-item">
+            • <strong>MSME Idea Hackathon</strong> – Shortlisted for Stage 2, Ministry of MSME, Govt of India (Aug 2026).
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="item">
+            <div class="row-main">
+                <span class="title-bold">B.Tech, Computer Science and Engineering</span>
+                <span class="meta-right">2023 – 2027</span>
+            </div>
+            <div class="row-sub">
+                <span class="sub-italic">Nalla Narasimha Reddy Education Society's Group of Institutions</span>
+                <span class="meta-right">Hyderabad, India</span>
+            </div>
+        </div>
+
+        <div class="item" style="margin-top: 1.5px;">
+            <div class="row-main">
+                <span class="title-bold">Intermediate (Class 12, MPC Stream) — Grade A</span>
+                <span class="meta-right">2021 – 2023</span>
+            </div>
+            <div class="row-sub">
+                <span class="sub-italic">Deccan's New Chaitanya Junior College</span>
+                <span class="meta-right">Hyderabad, India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
     <section class="section" style="margin-bottom:0;">
-        <h2 class="section-title">Certifications &amp; Achievements</h2>
+        <h2 class="section-title">Certifications</h2>
 
-        <div class="cert-item">
-            • <strong>Programming in Java</strong> — <em>NPTEL | IIT Kharagpur</em> <span class="cert-badge">[Elite · 88%]</span>
-            <span class="cert-meta">— Achieved Elite certification with 88% score in 12-week intensive (Jul–Oct 2026) | ID: NPTEL26CS153S1268107543</span>
-            <a href="https://md-rounaq-ali.netlify.app/assets/PROGRAMMING_IN_JAVA-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
+        <div class="bullet-item">
+            • <strong>NPTEL – Programming in Java</strong> (Jul–Oct 2026, 12 weeks) – <strong>88% (Elite)</strong> | IIT Kharagpur | ID: NPTEL26CS153S1268107543 <a href="https://md-rounaq-ali.netlify.app/assets/PROGRAMMING_IN_JAVA-NPTEL.pdf" target="_blank" rel="noopener">[Certificate]</a>
         </div>
 
-        <div class="cert-item">
-            • <strong>Python for Data Science</strong> — <em>NPTEL | IIT Madras</em> <span class="cert-badge">[Elite · 75%]</span>
-            <span class="cert-meta">— Achieved Elite certification with 75% score in 4-week specialized course (Jan–Feb 2026) | ID: NPTEL26CS80S357303782</span>
-            <a href="https://md-rounaq-ali.netlify.app/assets/PYTHON_FOR_DATA_SCIENCE-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
+        <div class="bullet-item">
+            • <strong>NPTEL – Python for Data Science</strong> (Jan–Feb 2026, 4 weeks) – <strong>75% (Elite)</strong> | IIT Madras | ID: NPTEL26CS80S357303782 <a href="https://md-rounaq-ali.netlify.app/assets/PYTHON_FOR_DATA_SCIENCE-NPTEL.pdf" target="_blank" rel="noopener">[Certificate]</a>
         </div>
 
-        <div class="cert-item">
-            • <strong>Database Management Systems</strong> — <em>NPTEL | IIT Kharagpur</em> <span class="cert-badge">[Elite · 78% · Top 2% in India]</span>
-            <span class="cert-meta">— Achieved Elite certification with 78% score, ranked in Top 2% nationwide (Jul–Sep 2025) | ID: NPTEL25CS145S537001497</span>
-            <a href="https://md-rounaq-ali.netlify.app/assets/DATABASE_MANAGEMENT_SYSTEM-NPTEL.pdf" target="_blank" rel="noopener" class="cert-view-link">[View Certificate]</a>
-        </div>
-
-        <div class="cert-item">
-            • <strong>Production Deployments:</strong> Successfully architected and deployed <strong>5+ software products</strong> across Flutter, Python, and Web with 100% public source code on GitHub.
+        <div class="bullet-item">
+            • <strong>NPTEL – Database Management Systems</strong> (Jul–Sep 2025, 8 weeks) – <strong>78% (Elite · Top 2% in India)</strong> | IIT Kharagpur | ID: NPTEL25CS145S537001497 <a href="https://md-rounaq-ali.netlify.app/assets/DATABASE_MANAGEMENT_SYSTEM-NPTEL.pdf" target="_blank" rel="noopener">[Certificate]</a>
         </div>
     </section>
 

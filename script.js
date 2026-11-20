@@ -408,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
                              - <span class="highlight-cmd">about</span>: Brief summary about me.<br>
                              - <span class="highlight-cmd">skills</span>: List of developer tools and stack.<br>
                              - <span class="highlight-cmd">projects</span>: Display my built projects.<br>
+                             - <span class="highlight-cmd">achievements</span>: National hackathons, 1st prize &amp; bug bounties.<br>
                              - <span class="highlight-cmd">contact</span>: How to get in touch with me.<br>
                              - <span class="highlight-cmd">clear</span>: Clear this console screen.</div>`;
                 } else if (cmdLower === 'about') {
@@ -426,6 +427,16 @@ document.addEventListener('DOMContentLoaded', () => {
                              - <strong>Block Crush</strong> (Flutter, Dart — 60+ FPS puzzle game)<br>
                              - <strong>FinTrack</strong> (Python, Flask, MySQL — Finance Tracker)<br>
                              - <strong>Weather Intel</strong> (Flutter, REST API — Real-time weather app)</div>`;
+                } else if (cmdLower === 'achievements' || cmdLower === 'awards' || cmdLower === 'hackathons') {
+                    reply = `<div class="terminal-line output-text"><strong>🏆 Honors &amp; Hackathon Achievements:</strong><br>
+                             - <strong>1st Prize — HackathonZ 2026 (Hack2Hire)</strong> | Malla Reddy University (Jul 17–18, 2026)<br>
+                             &nbsp;&nbsp;1st in Web Dev with team Kernel Knights (5 members). Built <em>TruthLens AI</em> (news bias detection platform).<br>
+                             - <strong>6th of 260+ Teams — LaunchPadX 2026</strong> | SNIST &amp; VetriaAI (Aug 22–23, 2026)<br>
+                             &nbsp;&nbsp;Ranked 6th of 1,200+ participants nationwide. Built <em>Life Admin AI</em> (MCP-powered multi-app execution agent).<br>
+                             - <strong>C-DAC BOSS OS Bug Bounty Challenge 2026</strong> | PAN-India 36-Hr Security Assessment (Jul 7–8, 2026)<br>
+                             &nbsp;&nbsp;Submitted 11 OS vulnerabilities evaluated by C-DAC jury on India's indigenous BOSS OS.<br>
+                             - <strong>MSME Idea Hackathon</strong> | Ministry of MSME, Govt of India (Aug 2026)<br>
+                             &nbsp;&nbsp;Shortlisted for Stage 2 national jury evaluation under the Ministry incubation grant scheme.</div>`;
                 } else if (cmdLower === 'contact') {
                     reply = `<div class="terminal-line output-text"><strong>Let's connect!</strong><br>
                              - Email: tabrasali7@gmail.com<br>
