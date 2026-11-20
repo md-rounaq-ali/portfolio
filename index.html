@@ -58,8 +58,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="manifest" href="/site.webmanifest">
+        <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#6c5ce7">
     <link rel="stylesheet" href="style.css"> <!-- Critical Resource Preloads (Performance Upgrade) -->
     <link rel="preload" href="assets/profile-avatar.png" as="image">
@@ -162,12 +161,40 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "Md Rounaq Ali — Developer Projects Portfolio",
-      "description": "A collection of production-ready software projects built by Md Rounaq Ali, a Flutter and Python developer from Hyderabad, India.",
+      "description": "A collection of production-ready software projects built by Md Rounaq Ali, a Full-Stack, Flutter and AI developer from Hyderabad, India.",
       "url": "https://md-rounaq-ali.netlify.app/#projects",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "ClaimTrackr — AI-Powered Automated Insurance Claims Processing System",
+            "description": "Automated insurance claims adjudication system featuring a LangChain RAG pipeline, FAISS vector search, sqlite-vec fraud duplicate detection, and SSE streaming reducing claim review latency from 14 days to under 15 seconds.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "programmingLanguage": ["Python", "Flask", "LangChain", "SQLite"],
+            "url": "https://github.com/md-rounaq-ali/AI-Powered-Automated-Insurance-Claims-Processing-System",
+            "author": { "@type": "Person", "name": "Md Rounaq Ali" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "NexBrief — IT Newsletter Platform",
+            "description": "Daily curated IT and AI newsletter platform delivering briefings on tech trends, AI research, and industry developments to 100+ active subscribers.",
+            "applicationCategory": "WebApplication",
+            "operatingSystem": "Web Browser",
+            "programmingLanguage": ["Python", "Flask", "JavaScript", "HTML", "CSS"],
+            "url": "https://nexbrief-news.onrender.com/",
+            "author": { "@type": "Person", "name": "Md Rounaq Ali" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "item": {
             "@type": "SoftwareApplication",
             "name": "VoxCalc — AI-Inspired Computational Suite",
@@ -181,21 +208,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "FinTrack — Personal Finance Tracker",
-            "description": "Full-stack personal finance management system built with Python Flask and MySQL featuring real-time Chart.js data visualizations and secure user authentication.",
-            "applicationCategory": "WebApplication",
-            "operatingSystem": "Web Browser",
-            "programmingLanguage": ["Python", "Flask", "MySQL", "JavaScript"],
-            "url": "https://personal-finance-tracker-l1n2.onrender.com/login?next=%2F",
-            "author": { "@type": "Person", "name": "Md Rounaq Ali" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Block Crush — Mobile Puzzle Game",
@@ -209,21 +222,21 @@
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "item": {
             "@type": "SoftwareApplication",
-            "name": "NexBrief — IT Newsletter Platform",
-            "description": "India's first dedicated IT newsletter platform delivering curated news on IT, AI, Education, and Research every morning.",
+            "name": "FinTrack — Personal Finance Tracker",
+            "description": "Full-stack personal finance management system built with Python Flask and MySQL featuring real-time Chart.js data visualizations and secure user authentication.",
             "applicationCategory": "WebApplication",
             "operatingSystem": "Web Browser",
-            "programmingLanguage": ["HTML", "CSS", "JavaScript"],
-            "url": "https://nexbrief-news.onrender.com/",
+            "programmingLanguage": ["Python", "Flask", "MySQL", "JavaScript"],
+            "url": "https://personal-finance-tracker-l1n2.onrender.com/login?next=%2F",
             "author": { "@type": "Person", "name": "Md Rounaq Ali" }
           }
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 6,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Weather Intel — Weather App",
@@ -236,8 +249,7 @@
           }
         }
       ]
-    }
-    </script>
+    }</script>
 </head>
 
 <body>
@@ -296,7 +308,7 @@
         <div class="hero-content">
             <div class="hero-badge animate-on-scroll">
                 <span class="badge-dot"></span>
-                Aspiring Software Developer
+                Software Engineer &amp; AI Developer
             </div>
             <h1 class="hero-title animate-on-scroll">
                 <span class="hero-greeting">Hello, I'm</span>
@@ -445,7 +457,7 @@
                 <div class="section-line"></div>
             </div>
             <div class="skills-grid">
-                <!-- Programming Languages -->
+                <!-- 1. Programming Languages -->
                 <div class="skill-category animate-on-scroll">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-code"></i></div>
@@ -454,26 +466,66 @@
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
                         <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill-tag"><i class="fas fa-copyright"></i> C</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> C</span>
+                        <span class="skill-tag"><i class="fas fa-bullseye"></i> Dart</span>
                         <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5 &amp; CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
                     </div>
                 </div>
 
-                <!-- Frameworks & Tools -->
+                <!-- 2. AI, LLMs & Machine Learning -->
                 <div class="skill-category animate-on-scroll">
                     <div class="category-header">
-                        <div class="category-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Frameworks & Tools</h3>
+                        <div class="category-icon"><i class="fas fa-brain"></i></div>
+                        <h3>AI &amp; Machine Learning</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> LangChain</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> RAG Architecture</span>
+                        <span class="skill-tag"><i class="fas fa-vector-square"></i> FAISS Vector Search</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> Ollama (Llama 3.2)</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> sqlite-vec</span>
+                        <span class="skill-tag"><i class="fas fa-eye"></i> Google ML Kit</span>
+                        <span class="skill-tag"><i class="fas fa-file-alt"></i> Tesseract OCR</span>
+                        <span class="skill-tag"><i class="fas fa-microchip"></i> NLP &amp; Context Caching</span>
+                    </div>
+                </div>
+
+                <!-- 3. Frameworks & Backend -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Frameworks &amp; Backend</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
-                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-pepper-hot"></i> Flask</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> RESTful APIs</span>
+                        <span class="skill-tag"><i class="fas fa-bolt"></i> Server-Sent Events (SSE)</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> TailwindCSS</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> Provider State Mgmt</span>
                     </div>
                 </div>
 
-                <!-- CS Fundamentals -->
+                <!-- 4. Databases & Cloud Platforms -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-database"></i></div>
+                        <h3>Databases &amp; Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> SQLite</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> Netlify</span>
+                        <span class="skill-tag"><i class="fas fa-globe"></i> Render</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Linux Shell</span>
+                    </div>
+                </div>
+
+                <!-- 5. CS Fundamentals & Systems -->
                 <div class="skill-category animate-on-scroll">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-sitemap"></i></div>
@@ -482,35 +534,26 @@
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fas fa-project-diagram"></i> Data Structures</span>
                         <span class="skill-tag"><i class="fas fa-cogs"></i> Algorithms</span>
-                        <span class="skill-tag"><i class="fas fa-cubes"></i> OOP</span>
-                        <span class="skill-tag"><i class="fas fa-database"></i> DBMS</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Object-Oriented (OOP)</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> DBMS Architecture</span>
+                        <span class="skill-tag"><i class="fas fa-microchip"></i> Operating Systems</span>
                         <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
                     </div>
                 </div>
 
-                <!-- Data & Analytics -->
-                <div class="skill-category animate-on-scroll">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="fas fa-chart-bar"></i></div>
-                        <h3>Data & Analytics</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Data Analysis</span>
-                        <span class="skill-tag"><i class="fas fa-flask"></i> Data Science</span>
-                    </div>
-                </div>
-
-                <!-- DevOps & Security -->
+                <!-- 6. Security & Engineering Practices -->
                 <div class="skill-category animate-on-scroll">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>DevOps & Security</h3>
+                        <h3>Security &amp; Engineering</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-infinity"></i> DevOps</span>
-                        <span class="skill-tag"><i class="fas fa-lock"></i> Information Security</span>
-                        <span class="skill-tag"><i class="fas fa-user-shield"></i> Cyber Security</span>
-                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Networking Fundamentals</span>
+                        <span class="skill-tag"><i class="fas fa-user-shield"></i> Security Assessment (C-DAC)</span>
+                        <span class="skill-tag"><i class="fas fa-plug"></i> Model Context Protocol (MCP)</span>
+                        <span class="skill-tag"><i class="fas fa-bug"></i> Vulnerability Auditing</span>
+                        <span class="skill-tag"><i class="fas fa-infinity"></i> CI/CD Pipelines</span>
+                        <span class="skill-tag"><i class="fas fa-vial"></i> Unit Testing &amp; Debugging</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Agile &amp; Scrum</span>
                     </div>
                 </div>
             </div>

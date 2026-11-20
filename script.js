@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Typing Effect ----
     const roles = [
-        'Aspiring Software Developer',
-        'Flutter Developer',
-        'Python | Java | C Programmer',
-        'Open Source Enthusiast',
-        'CSE Student @ NNRESGI',
-        'Problem Solver'
+        'Full-Stack & Mobile Developer',
+        'AI & LLM Backend Engineer',
+        'Flutter Application Specialist',
+        'Hackathon Winner (1st Prize)',
+        'B.Tech CSE @ NNRESGI (2027)',
+        'Algorithmic Problem Solver'
     ];
     const typedEl = document.getElementById('typedRole');
     let roleIdx = 0, charIdx = 0, deleting = false;
@@ -406,9 +406,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (cmdLower === 'help') {
                     reply = `<div class="terminal-line output-text">Available commands:<br>
                              - <span class="highlight-cmd">about</span>: Brief summary about me.<br>
-                             - <span class="highlight-cmd">skills</span>: List of developer tools and stack.<br>
-                             - <span class="highlight-cmd">projects</span>: Display my built projects.<br>
+                             - <span class="highlight-cmd">skills</span>: List of developer tools and tech stack.<br>
+                             - <span class="highlight-cmd">projects</span>: Display my built projects &amp; case studies.<br>
                              - <span class="highlight-cmd">achievements</span>: National hackathons, 1st prize &amp; bug bounties.<br>
+                             - <span class="highlight-cmd">resume</span>: View interactive ATS resume &amp; download PDF/DOCX.<br>
                              - <span class="highlight-cmd">contact</span>: How to get in touch with me.<br>
                              - <span class="highlight-cmd">clear</span>: Clear this console screen.</div>`;
                 } else if (cmdLower === 'about') {
@@ -437,6 +438,11 @@ document.addEventListener('DOMContentLoaded', () => {
                              &nbsp;&nbsp;Submitted 11 OS vulnerabilities evaluated by C-DAC jury on India's indigenous BOSS OS.<br>
                              - <strong>MSME Idea Hackathon</strong> | Ministry of MSME, Govt of India (Aug 2026)<br>
                              &nbsp;&nbsp;Shortlisted for Stage 2 national jury evaluation under the Ministry incubation grant scheme.</div>`;
+                } else if (cmdLower === 'resume' || cmdLower === 'cv') {
+                    reply = `<div class="terminal-line output-text"><strong>📄 Mohammed Rounaq Ali &mdash; Software Engineer Resume:</strong><br>
+                             &bull; <a href="assets/resume.html" target="_blank" style="color: #6c5ce7; text-decoration: underline; font-weight: 600;">Interactive ATS Resume (Web View) &rarr;</a><br>
+                             &bull; <a href="assets/Mohammed_Rounaq_Ali_Resume.pdf" download style="color: #00cec9; text-decoration: underline;">Download 1-Page Vector PDF</a><br>
+                             &bull; <a href="assets/Mohammed_Rounaq_Ali_Resume.docx" download style="color: #00cec9; text-decoration: underline;">Download 1-Page Word DOCX</a></div>`;
                 } else if (cmdLower === 'contact') {
                     reply = `<div class="terminal-line output-text"><strong>Let's connect!</strong><br>
                              - Email: tabrasali7@gmail.com<br>

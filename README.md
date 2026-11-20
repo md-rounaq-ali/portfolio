@@ -80,6 +80,7 @@ Below is a reference of the commands built directly into the CLI controller:
 | `skills` | Renders Stack | Generates a structured list of core languages, frameworks, AI/ML, databases, and DevOps tools |
 | `projects` | Details Assets | Returns live links and tech stacks for *ClaimTrackr*, *NexBrief*, *VoxCalc*, *Block Crush*, *FinTrack*, and *Weather Intel* |
 | `achievements` | Displays Honors | Lists national hackathon victories, 1st prize awards, and C-DAC bug bounty assessment records |
+| `resume` | ATS Credentials | Direct links to interactive web resume and 1-click downloads for 1-Page PDF & DOCX |
 | `contact` | Prints Channels | Outlines instant direct communication channels (Email, WhatsApp, Location) |
 | `clear` | Clears Screen | Flushes DOM history inside the terminal card console |
 
@@ -121,6 +122,11 @@ Below is a reference of the commands built directly into the CLI controller:
 
 ```text
 portfolio-website/
+├── achievements/                          # Dedicated Google Sitelink & Case Study subpages
+│   ├── hackathonz-2026-1st-prize/         # 1st Prize, Web Development — HackathonZ 2026
+│   ├── launchpadx-snist-6th-rank/         # 6th of 260+ teams — LaunchPadX 2026
+│   ├── cdac-boss-os-bug-bounty/           # C-DAC BOSS OS Bug Bounty Challenge 2026
+│   └── msme-idea-hackathon/               # MSME Idea Hackathon (Stage 2 Shortlist)
 ├── assets/
 │   ├── claimtrackr.jpg                    # ClaimTrackr AI System project card banner
 │   ├── nexbrief-v2.jpg                    # NexBrief IT Newsletter Platform preview
@@ -140,10 +146,11 @@ portfolio-website/
 ├── index.html                             # Main single-page application & semantic layout
 ├── style.css                              # Design tokens, glassmorphism, animations, & media queries
 ├── script.js                              # Terminal shell, scroll controller, particles, & EmailJS
-├── manifest.json                          # PWA web manifest
 ├── site.webmanifest                       # Progressive Web App configuration
 ├── robots.txt                             # Search crawler instruction set
-├── sitemap.xml                            # Search engine XML sitemap index
+├── sitemap.xml                            # Search engine XML sitemap index (all 6 URLs)
+├── llms.txt                               # Google AI Overview & LLM context summary
+├── llms-full.txt                          # Comprehensive LLM ground truth context
 ├── _headers                               # Netlify custom HTTP headers (CORS & caching)
 └── README.md                              # Professional repository documentation
 ```
