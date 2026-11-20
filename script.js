@@ -413,16 +413,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (cmdLower === 'about') {
                     reply = `<div class="terminal-line output-text">Hi, I'm Md Rounaq Ali! I am a B.Tech Computer Science student graduating in 2027. I specialize in building secure, high-performance web and mobile products. Passionate about problem-solving and software architecture.</div>`;
                 } else if (cmdLower === 'skills') {
-                    reply = `<div class="terminal-line output-text"><strong>Languages:</strong> Python, Java, C, SQL<br>
-                             <strong>Frameworks:</strong> Flutter, Flask<br>
-                             <strong>DevOps/Tools:</strong> GitHub, Git, MySQL, Devops, Network Security</div>`;
+                    reply = `<div class="terminal-line output-text"><strong>Languages:</strong> Python, Java, C, Dart, SQL<br>
+                             <strong>Frameworks & Libraries:</strong> Flutter, Flask, LangChain, TailwindCSS<br>
+                             <strong>AI/ML:</strong> Ollama (Llama 3.2), RAG (FAISS), Tesseract OCR, Google ML Kit NLP<br>
+                             <strong>Databases:</strong> MySQL, SQLite, sqlite-vec<br>
+                             <strong>DevOps/Tools:</strong> Git, GitHub, Render, Netlify, REST APIs, CI/CD</div>`;
                 } else if (cmdLower === 'projects') {
                     reply = `<div class="terminal-line output-text"><strong>Featured Projects:</strong><br>
-                             - <strong>NexBrief</strong> (AI & IT Dedicated Newsletter Platform)<br>
-                             - <strong>VoxCalc</strong> (Flutter, Dart, Google ML Kit AI computational suite)<br>
-                             - <strong>Block Crush</strong> (Flutter, Dart, 60+ FPS game)<br>
-                             - <strong>FinTrack</strong> (Flask, MySQL tracker)<br>
-                             - <strong>Weather Intel</strong> (Flutter, REST API)</div>`;
+                             - <strong>ClaimTrackr</strong> (Python, LangChain, RAG, Ollama — AI Insurance Claims System · Team Project)<br>
+                             - <strong>NexBrief</strong> (Python, Flask — AI &amp; IT Newsletter Platform · 100+ subscribers)<br>
+                             - <strong>VoxCalc</strong> (Flutter, Dart, Google ML Kit — AI Computation Suite · 95% OCR accuracy)<br>
+                             - <strong>Block Crush</strong> (Flutter, Dart — 60+ FPS puzzle game)<br>
+                             - <strong>FinTrack</strong> (Python, Flask, MySQL — Finance Tracker)<br>
+                             - <strong>Weather Intel</strong> (Flutter, REST API — Real-time weather app)</div>`;
                 } else if (cmdLower === 'contact') {
                     reply = `<div class="terminal-line output-text"><strong>Let's connect!</strong><br>
                              - Email: tabrasali7@gmail.com<br>
