@@ -79,26 +79,48 @@
         }
 
         /* ===== Download Button ===== */
-        .print-btn {
+        /* ===== Action Bar (Top Right) ===== */
+        .action-bar {
             position: fixed;
             top: 14px; right: 18px;
             z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 5px 8px;
+            border-radius: 6px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            border: 1px solid #cbd5e1;
+        }
+        .action-btn {
             background: #000000;
-            color: #ffffff;
+            color: #ffffff !important;
             border: 1px solid #000000;
-            padding: 7px 15px;
+            padding: 6px 12px;
             border-radius: 4px;
             font-size: 11px;
             font-weight: 600;
-            font-family: inherit;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            text-decoration: none !important;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
+            transition: background 0.15s ease, transform 0.15s ease;
         }
-        .print-btn:hover { background: #333333; }
+        .action-btn:hover {
+            background: #222222;
+            transform: translateY(-1px);
+        }
+        .action-btn.secondary {
+            background: #ffffff;
+            color: #000000 !important;
+            border: 1px solid #000000;
+        }
+        .action-btn.secondary:hover {
+            background: #f1f5f9;
+        }
 
         /* ===== A4 Page ===== */
         .page {
@@ -215,7 +237,7 @@
 
         @media print {
             body { background: #fff; font-size: 8.2pt; }
-            .print-btn { display: none !important; }
+            .action-bar { display: none !important; }
             .page {
                 width: 100%;
                 min-height: auto;
@@ -230,14 +252,34 @@
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>
-    <span>Print / Download PDF</span>
-</button>
+<div class="action-bar">
+    <a href="Mohammed_Rounaq_Ali_Resume.pdf" download="Mohammed_Rounaq_Ali_Resume.pdf" class="action-btn" title="Download 1-Page PDF">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Download PDF</span>
+    </a>
+    <a href="Mohammed_Rounaq_Ali_Resume.docx" download="Mohammed_Rounaq_Ali_Resume.docx" class="action-btn" title="Download ATS Word DOCX">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        <span>Download DOCX</span>
+    </a>
+    <button class="action-btn secondary" onclick="window.print()" title="Print / Save as PDF">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        <span>Print</span>
+    </button>
+</div>
 
 <div class="page">
 
@@ -414,7 +456,7 @@
 
         <div class="item" style="margin-top: 1px;">
             <div class="row-main">
-                <span class="title-bold">Intermediate (Class 12, MPC Stream) — Grade A</span>
+                <span class="title-bold">Intermediate (Class 12, MPC Stream) &nbsp;|&nbsp; Achieved Grade A</span>
                 <span class="meta-right">2021 – 2023</span>
             </div>
             <div class="row-sub">
